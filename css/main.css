@@ -1636,6 +1636,9 @@ pre .javascript .function {
     transform: rotateZ(-30deg);
   }
 }
+.post-wordcount {
+  display: inline-block;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1793,7 +1796,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d9ff16;
+  background: #ff9a91;
 }
 .links-of-blogroll {
   font-size: 13px;
