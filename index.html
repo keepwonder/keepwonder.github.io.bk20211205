@@ -118,9 +118,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: 'VF9I58S9AI',
+      apiKey: '2054c19e0cbcf481d38cb82ca5a942f6',
+      indexName: 'dev_Hexo',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -296,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/01/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/大数据/Ubuntu16-04-Install-Hadoop-2-8-0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Johnathon Qiang">
@@ -315,7 +315,204 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/01/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/" itemprop="url">Ubuntu安装并配置JDK</a></h1>
+                <a class="post-title-link" href="/大数据/Ubuntu16-04-Install-Hadoop-2-8-0/" itemprop="url">Ubuntu16.04 Install Hadoop 2.8.0</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T14:59:24+08:00">
+                2017-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/大数据/Ubuntu16-04-Install-Hadoop-2-8-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="大数据/Ubuntu16-04-Install-Hadoop-2-8-0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/大数据/Ubuntu16-04-Install-Hadoop-2-8-0/" class="leancloud_visitors" data-flag-title="Ubuntu16.04 Install Hadoop 2.8.0">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                    (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                    (分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="创建hadoop用户"><a href="#创建hadoop用户" class="headerlink" title="创建hadoop用户"></a>创建hadoop用户</h2><ol>
+<li>创建用户hadoop,并且用/bin/bash作为默认shell：<br> johnathon@ubuntu16:~$ sudo useradd -m hadoop -s /bin/bash</li>
+<li>为用户hadoop设置密码：<br> johnathon@ubuntu16:~$ sudo passwd hadoop</li>
+<li>将用户hadoop加入sudo组：<br> johnathon@ubuntu16:~$ sudo adduser hadoop sudo</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/大数据/Ubuntu16-04-Install-Hadoop-2-8-0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johnathon Qiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johnathon's Blabla">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/" itemprop="url">Ubuntu安装并配置JDK</a></h1>
         
 
         <div class="post-meta">
@@ -368,9 +565,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/01/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/#comments" itemprop="discussionUrl">
+                <a href="/配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/01/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/" itemprop="commentCount"></span>
+                        data-disqus-identifier="配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -378,7 +575,7 @@
 
           
           
-             <span id="/2017/07/01/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/" class="leancloud_visitors" data-flag-title="Ubuntu安装并配置JDK">
+             <span id="/配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/" class="leancloud_visitors" data-flag-title="Ubuntu安装并配置JDK">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -392,6 +589,39 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                    (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                    (分)
+                </span>
+              
+            </div>
           
 
           
@@ -407,33 +637,21 @@
 
       
         
-          
-            <ol>
+          <ol>
 <li><p>查看系统位数，终端输入：<br> getconf LONG_BIT</p>
 </li>
 <li><p>下载对应版本的jdk，这里下载的是jdk-8u131-linux-x64.tar.gz</p>
 </li>
 <li><p>创建目录作为jdk安装目录，这里选择安装位置为：~/Java（可自行选择安装路径）<br> sudo mkdir Java</p>
 </li>
-<li><p>解压文件到上一步创建的目录~/Java目录下,JDK默认下载路径为Downloads目录<br> cd ~/Downloads<br> sudo tar -zxvf jdk-8u131-linux-x64.tar.gz -C ~/Java</p>
-</li>
-<li><p>配置系统环境变量(全局：/etc/profile|当前用户：~/.bashrc)<br> sudo vi /etc/profile</p>
-<p> 在最后加入:</p>
-<p> ##config java environment start<br> export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131<br> export JRE_HOME=${JAVA_HOME}/jre<br> export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH<br> export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH<br> ##config java environment end</p>
-<p> 修改完成后，保存并关闭，输入一下命令使环境变量生效<br> source /etc/profile</p>
-</li>
-<li><p>查看安装版本：<br> java -version</p>
-</li>
-<li><p>本以为到此就结束了，结果发现每次重新打开一个terminal，就找不到java环境，搜索发现做以下配置:</p>
-<p> 配置/etc/bash.bashrc</p>
-<p> sudo vi /etc/bash.bashrc<br> 在最后加入：<br> ##config java environment start<br> export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131<br> export JRE_HOME=${JAVA_HOME}/jre<br> export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH<br> export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH<br> ##config java environment end</p>
-<p> 改完成后，保存并关闭，输入一下命令使环境变量生效<br> source /etc/bash.bashrc</p>
-</li>
-<li><p>到此完成安装配置jdk。</p>
-</li>
 </ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -475,7 +693,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/01/Mac-Connect-Ubuntu-In-VWware-Fusion/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/配置相关/Mac-Connect-Ubuntu-In-VWware-Fusion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Johnathon Qiang">
@@ -494,7 +712,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/01/Mac-Connect-Ubuntu-In-VWware-Fusion/" itemprop="url">Mac Connect Ubuntu In VWware Fusion</a></h1>
+                <a class="post-title-link" href="/配置相关/Mac-Connect-Ubuntu-In-VWware-Fusion/" itemprop="url">Mac Connect Ubuntu In VWware Fusion</a></h1>
         
 
         <div class="post-meta">
@@ -547,9 +765,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/01/Mac-Connect-Ubuntu-In-VWware-Fusion/#comments" itemprop="discussionUrl">
+                <a href="/配置相关/Mac-Connect-Ubuntu-In-VWware-Fusion/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/01/Mac-Connect-Ubuntu-In-VWware-Fusion/" itemprop="commentCount"></span>
+                        data-disqus-identifier="配置相关/Mac-Connect-Ubuntu-In-VWware-Fusion/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +775,7 @@
 
           
           
-             <span id="/2017/07/01/Mac-Connect-Ubuntu-In-VWware-Fusion/" class="leancloud_visitors" data-flag-title="Mac Connect Ubuntu In VWware Fusion">
+             <span id="/配置相关/Mac-Connect-Ubuntu-In-VWware-Fusion/" class="leancloud_visitors" data-flag-title="Mac Connect Ubuntu In VWware Fusion">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -571,6 +789,39 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                    (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                    (分)
+                </span>
+              
+            </div>
           
 
           
@@ -586,21 +837,18 @@
 
       
         
-          
-            <h1 id="Mac-和-Linux虚拟机互通"><a href="#Mac-和-Linux虚拟机互通" class="headerlink" title="Mac 和 Linux虚拟机互通"></a>Mac 和 Linux虚拟机互通</h1><h2 id="1-开启ssh服务"><a href="#1-开启ssh服务" class="headerlink" title="1.开启ssh服务"></a>1.开启ssh服务</h2><ul>
+          <h1 id="Mac-和-Linux虚拟机互通"><a href="#Mac-和-Linux虚拟机互通" class="headerlink" title="Mac 和 Linux虚拟机互通"></a>Mac 和 Linux虚拟机互通</h1><h2 id="开启ssh服务"><a href="#开启ssh服务" class="headerlink" title="开启ssh服务"></a>开启ssh服务</h2><ul>
 <li>查看是否安装ssh服务：ps -e | grep ssh</li>
 <li>安装ssh服务：sudo apt-get install ssh</li>
 </ul>
-<h2 id="2-mac终端ssh连接Linux虚拟机"><a href="#2-mac终端ssh连接Linux虚拟机" class="headerlink" title="2.mac终端ssh连接Linux虚拟机:"></a>2.mac终端ssh连接Linux虚拟机:</h2><p>ssh user@remote[ip] </p>
-<p>为了方便使用别名<strong>sshubt</strong>登陆</p>
-<ol>
-<li>编辑mac下.bash_profile文件(需要root权限):<br>sudo vi ~/.bash_profile</li>
-<li>添加下面语句<br>alias sshubt=’ssh myusername@192.168.0.0’</li>
-<li>使用别名sshubt，输入连接到的Linux主机密码，登陆即可</li>
-</ol>
-<h2 id="3-mac上传文件址Linux虚拟机"><a href="#3-mac上传文件址Linux虚拟机" class="headerlink" title="3.mac上传文件址Linux虚拟机"></a>3.mac上传文件址Linux虚拟机</h2><p>scp ~/local/file user@remtoe:~/file<br>~/local/file: mac文件路径<br>user@remote:~/file: 服务器文件路径</p>
-
-          
+<h2 id="mac终端ssh连接Linux虚拟机"><a href="#mac终端ssh连接Linux虚拟机" class="headerlink" title="mac终端ssh连接Linux虚拟机:"></a>mac终端ssh连接Linux虚拟机:</h2><p>ssh user@remote[ip] </p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/配置相关/Mac-Connect-Ubuntu-In-VWware-Fusion/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -642,7 +890,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/long-time-no-see/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/uncategorized/long-time-no-see/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Johnathon Qiang">
@@ -661,7 +909,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/19/long-time-no-see/" itemprop="url">long time no see</a></h1>
+                <a class="post-title-link" href="/uncategorized/long-time-no-see/" itemprop="url">long time no see</a></h1>
         
 
         <div class="post-meta">
@@ -692,9 +940,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/19/long-time-no-see/#comments" itemprop="discussionUrl">
+                <a href="/uncategorized/long-time-no-see/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/19/long-time-no-see/" itemprop="commentCount"></span>
+                        data-disqus-identifier="uncategorized/long-time-no-see/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -702,7 +950,7 @@
 
           
           
-             <span id="/2017/06/19/long-time-no-see/" class="leancloud_visitors" data-flag-title="long time no see">
+             <span id="/uncategorized/long-time-no-see/" class="leancloud_visitors" data-flag-title="long time no see">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -716,6 +964,39 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                    (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                    (分)
+                </span>
+              
+            </div>
           
 
           
@@ -812,7 +1093,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -823,7 +1104,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -834,7 +1115,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
