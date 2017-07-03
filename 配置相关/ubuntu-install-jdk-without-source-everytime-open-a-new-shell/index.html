@@ -93,17 +93,16 @@
 
 
 
-<meta name="description" content="查看系统位数，终端输入： getconf LONG_BIT  下载对应版本的jdk，这里下载的是jdk-8u131-linux-x64.tar.gz  创建目录作为jdk安装目录，这里选择安装位置为：~/Java（可自行选择安装路径） sudo mkdir Java">
 <meta name="keywords" content="jdk,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu安装并配置JDK">
 <meta property="og:url" content="http://yoursite.com/配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/index.html">
 <meta property="og:site_name" content="Johnathon&#39;s Blabla">
-<meta property="og:description" content="查看系统位数，终端输入： getconf LONG_BIT  下载对应版本的jdk，这里下载的是jdk-8u131-linux-x64.tar.gz  创建目录作为jdk安装目录，这里选择安装位置为：~/Java（可自行选择安装路径） sudo mkdir Java">
-<meta property="og:updated_time" content="2017-07-02T08:36:43.000Z">
+<meta property="og:image" content="http://yoursite.com/img/java.png">
+<meta property="og:updated_time" content="2017-07-03T13:18:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu安装并配置JDK">
-<meta name="twitter:description" content="查看系统位数，终端输入： getconf LONG_BIT  下载对应版本的jdk，这里下载的是jdk-8u131-linux-x64.tar.gz  创建目录作为jdk安装目录，这里选择安装位置为：~/Java（可自行选择安装路径） sudo mkdir Java">
+<meta name="twitter:image" content="http://yoursite.com/img/java.png">
 
 
 
@@ -474,30 +473,48 @@
       
 
       
-        <ol>
-<li><p>查看系统位数，终端输入：<br> getconf LONG_BIT</p>
-</li>
+        <p><img src="/img/java.png"><br><a id="more"></a></p>
+<ol>
+<li><p>查看系统位数，终端输入：</p>
+<pre><code>getconf LONG_BIT
+</code></pre></li>
 <li><p>下载对应版本的jdk，这里下载的是jdk-8u131-linux-x64.tar.gz</p>
 </li>
-<li><p>创建目录作为jdk安装目录，这里选择安装位置为：~/Java（可自行选择安装路径）<br> sudo mkdir Java</p>
-</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li><p>解压文件到上一步创建的目录~/Java目录下,JDK默认下载路径为Downloads目录<br> cd ~/Downloads<br> sudo tar -zxvf jdk-8u131-linux-x64.tar.gz -C ~/Java</p>
-</li>
-<li><p>配置系统环境变量(全局：/etc/profile|当前用户：~/.bashrc)<br> sudo vi /etc/profile</p>
-<p> 在最后加入:</p>
-<p> ##config java environment start<br> export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131<br> export JRE_HOME=${JAVA_HOME}/jre<br> export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH<br> export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH<br> ##config java environment end</p>
-<p> 修改完成后，保存并关闭，输入一下命令使环境变量生效<br> source /etc/profile</p>
-</li>
-<li><p>查看安装版本：<br> java -version</p>
-</li>
+<li><p>创建目录作为jdk安装目录，这里选择安装位置为：~/Java（可自行选择安装路径）</p>
+<pre><code>sudo mkdir Java
+</code></pre></li>
+<li><p>解压文件到上一步创建的目录~/Java目录下,JDK默认下载路径为Downloads目录</p>
+<pre><code>cd ~/Downloads
+sudo tar -zxvf jdk-8u131-linux-x64.tar.gz -C ~/Java
+</code></pre></li>
+<li><p>配置系统环境变量(全局：/etc/profile|当前用户：~/.bashrc)</p>
+<pre><code>sudo vi /etc/profile
+</code></pre><p> 在最后加入:</p>
+<pre><code>##config java environment start
+export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH
+export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH
+##config java environment end
+</code></pre><p> 修改完成后，保存并关闭，输入一下命令使环境变量生效</p>
+<pre><code>source /etc/profile
+</code></pre></li>
+<li><p>查看安装版本：</p>
+<pre><code>java -version
+</code></pre></li>
 <li><p>本以为到此就结束了，结果发现每次重新打开一个terminal，就找不到java环境，搜索发现做以下配置:</p>
 <p> 配置/etc/bash.bashrc</p>
-<p> sudo vi /etc/bash.bashrc<br> 在最后加入：<br> ##config java environment start<br> export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131<br> export JRE_HOME=${JAVA_HOME}/jre<br> export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH<br> export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH<br> ##config java environment end</p>
-<p> 改完成后，保存并关闭，输入一下命令使环境变量生效<br> source /etc/bash.bashrc</p>
-</li>
+<pre><code>sudo vi /etc/bash.bashrc
+</code></pre><p> 在最后加入：</p>
+<pre><code>##config java environment start
+export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH
+export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH
+##config java environment end
+</code></pre><p> 改完成后，保存并关闭，输入一下命令使环境变量生效</p>
+<pre><code>source /etc/bash.bashrc
+</code></pre></li>
 <li><p>到此完成安装配置jdk。</p>
 </li>
 </ol>
@@ -593,27 +610,31 @@
 
     <div class="post-spread">
       
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_tqq"></a>
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_cqq"></a>
-  <a class="jiathis_button_douban"></a>
-  <a class="jiathis_button_renren"></a>
-  <a class="jiathis_button_qzone"></a>
-  <a class="jiathis_button_kaixin001"></a>
-  <a class="jiathis_button_copy"></a>
-  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-  var jiathis_config={
-    hideMore:false
-  }
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
 
       
     </div>

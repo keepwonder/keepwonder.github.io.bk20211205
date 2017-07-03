@@ -93,17 +93,16 @@
 
 
 
-<meta name="description" content="创建hadoop用户 创建用户hadoop,并且用/bin/bash作为默认shell： johnathon@ubuntu16:~$ sudo useradd -m hadoop -s /bin/bash 为用户hadoop设置密码： johnathon@ubuntu16:~$ sudo passwd hadoop 将用户hadoop加入sudo组： johnathon@ubuntu16:~$ s">
 <meta name="keywords" content="hadoop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu16.04 Install Hadoop 2.8.0">
 <meta property="og:url" content="http://yoursite.com/大数据/Ubuntu16-04-Install-Hadoop-2-8-0/index.html">
 <meta property="og:site_name" content="Johnathon&#39;s Blabla">
-<meta property="og:description" content="创建hadoop用户 创建用户hadoop,并且用/bin/bash作为默认shell： johnathon@ubuntu16:~$ sudo useradd -m hadoop -s /bin/bash 为用户hadoop设置密码： johnathon@ubuntu16:~$ sudo passwd hadoop 将用户hadoop加入sudo组： johnathon@ubuntu16:~$ s">
-<meta property="og:updated_time" content="2017-07-02T08:35:48.000Z">
+<meta property="og:image" content="http://yoursite.com/img/hadoop.jpg">
+<meta property="og:updated_time" content="2017-07-03T13:14:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu16.04 Install Hadoop 2.8.0">
-<meta name="twitter:description" content="创建hadoop用户 创建用户hadoop,并且用/bin/bash作为默认shell： johnathon@ubuntu16:~$ sudo useradd -m hadoop -s /bin/bash 为用户hadoop设置密码： johnathon@ubuntu16:~$ sudo passwd hadoop 将用户hadoop加入sudo组： johnathon@ubuntu16:~$ s">
+<meta name="twitter:image" content="http://yoursite.com/img/hadoop.jpg">
 
 
 
@@ -440,7 +439,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  159 (字)
+                  596 (字)
                 </span>
               
 
@@ -456,7 +455,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1 (分)
+                  3 (分)
                 </span>
               
             </div>
@@ -474,28 +473,92 @@
       
 
       
-        <h2 id="创建hadoop用户"><a href="#创建hadoop用户" class="headerlink" title="创建hadoop用户"></a>创建hadoop用户</h2><ol>
-<li>创建用户hadoop,并且用/bin/bash作为默认shell：<br> johnathon@ubuntu16:~$ sudo useradd -m hadoop -s /bin/bash</li>
-<li>为用户hadoop设置密码：<br> johnathon@ubuntu16:~$ sudo passwd hadoop</li>
-<li>将用户hadoop加入sudo组：<br> johnathon@ubuntu16:~$ sudo adduser hadoop sudo</li>
+        <p><img src="/img/hadoop.jpg"><br><a id="more"></a></p>
+<h2 id="创建hadoop用户"><a href="#创建hadoop用户" class="headerlink" title="创建hadoop用户"></a>创建hadoop用户</h2><ol>
+<li>创建用户hadoop,并且用/bin/bash作为默认shell：<pre><code>johnathon@ubuntu16:~$ sudo useradd -m hadoop -s /bin/bash
+</code></pre></li>
+<li>为用户hadoop设置密码：<pre><code>johnathon@ubuntu16:~$ sudo passwd hadoop
+</code></pre></li>
+<li>将用户hadoop加入sudo组：<pre><code>johnathon@ubuntu16:~$ sudo adduser hadoop sudo
+</code></pre></li>
 </ol>
-<a id="more"></a>
 <h2 id="更新apt"><a href="#更新apt" class="headerlink" title="更新apt"></a>更新apt</h2><ul>
-<li>hadoop@ubuntu16:~$ sudo apt-get update</li>
+<li><pre><code>hadoop@ubuntu16:~$ sudo apt-get update
+</code></pre></li>
 </ul>
 <h2 id="配置ssh免密登陆"><a href="#配置ssh免密登陆" class="headerlink" title="配置ssh免密登陆"></a>配置ssh免密登陆</h2><ol>
-<li>安装ssh服务<br> hadoop@ubuntu16:~$ sudo apt-get install ssh</li>
-<li>创建.ssh目录<br> hadoop@ubuntu16:~$ cd ~<br> hadoop@ubuntu16:~$ mkdir .ssh</li>
-<li>生成ssh密钥<br> hadoop@ubuntu16:~$ cd .ssh/<br> hadoop@ubuntu16:~$ ssh-keygen -t rsa<br> hadoop@ubuntu16:~/.ssh$ cat id_rsa.pub &gt;&gt; authorized_keys</li>
+<li>安装ssh服务<pre><code>hadoop@ubuntu16:~$ sudo apt-get install ssh
+</code></pre></li>
+<li>创建.ssh目录<pre><code>hadoop@ubuntu16:~$ cd ~
+hadoop@ubuntu16:~$ mkdir .ssh
+</code></pre></li>
+<li>生成ssh密钥<pre><code>hadoop@ubuntu16:~$ cd .ssh/
+hadoop@ubuntu16:~$ ssh-keygen -t rsa
+hadoop@ubuntu16:~/.ssh$ cat id_rsa.pub &gt;&gt; authorized_keys
+</code></pre></li>
+<li>ssh登陆localhost<pre><code>hadoop@ubuntu16:~/.ssh$ cd
+hadoop@ubuntu16:~$ ssh localhost
+</code></pre></li>
+<li>退出ssh登陆<pre><code>hadoop@ubuntu16:~$ exit
+logout
+Connection to localhost closed.
+</code></pre></li>
 </ol>
-<h2 id="ssh登陆localhost"><a href="#ssh登陆localhost" class="headerlink" title="ssh登陆localhost"></a>ssh登陆localhost</h2><ul>
-<li>hadoop@ubuntu16:~/.ssh$ cd</li>
-<li>hadoop@ubuntu16:~$ ssh localhost</li>
-</ul>
-<h2 id="退出ssh登陆"><a href="#退出ssh登陆" class="headerlink" title="退出ssh登陆"></a>退出ssh登陆</h2><p>hadoop@ubuntu16:~$ exit<br>logout<br>Connection to localhost closed.</p>
 <h2 id="安装配置jdk"><a href="#安装配置jdk" class="headerlink" title="安装配置jdk"></a>安装配置jdk</h2><ul>
 <li>参考<a href="配置相关/ubuntu-install-jdk-without-source-everytime-open-a-new-shell/">Ubuntu安装并配置JDK</a></li>
 </ul>
+<h2 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h2><ol>
+<li>解压hadoop安装文件到相应的目录<pre><code>hadoop@ubuntu16:~$ sudo tar -zxf hadoop-2.8.0.tar.gz -C /usr/local
+</code></pre></li>
+<li>给hadoop目录重命名<pre><code>hadoop@ubuntu16:~$ cd /usr/local
+hadoop@ubuntu16:/usr/local$ sudo mv hadoop-2.8.0/ hadoop
+</code></pre></li>
+<li>将hadoop目录用户改为hadoop<pre><code>hadoop@ubuntu16:/usr/local$ sudo chown -R hadoop hadoop/
+</code></pre></li>
+<li>查看hadoop目录<pre><code>hadoop@ubuntu16:/usr/local$ cd hadoop/
+hadoop@ubuntu16:/usr/local/hadoop$ ls -l
+total 148
+-rw-r--r-- 1 hadoop dialout 99253 Mar 17 13:31 LICENSE.txt
+-rw-r--r-- 1 hadoop dialout 15915 Mar 17 13:31 NOTICE.txt
+-rw-r--r-- 1 hadoop dialout  1366 Mar 17 13:31 README.txt
+drwxr-xr-x 2 hadoop dialout  4096 Mar 17 13:31 bin
+drwxr-xr-x 3 hadoop dialout  4096 Mar 17 13:31 etc
+drwxr-xr-x 2 hadoop dialout  4096 Mar 17 13:31 include
+drwxr-xr-x 3 hadoop dialout  4096 Mar 17 13:31 lib
+drwxr-xr-x 2 hadoop dialout  4096 Mar 17 13:31 libexec
+drwxr-xr-x 2 hadoop dialout  4096 Mar 17 13:31 sbin
+drwxr-xr-x 4 hadoop dialout  4096 Mar 17 13:31 share
+</code></pre></li>
+<li><p>查看hadoop版本信息</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hadoop$ ./bin/hadoop version
+Hadoop 2.8.0
+Subversion https://git-wip-us.apache.org/repos/asf/hadoop.git -r 91f2b7a13d1e97be65db92ddabc627cc29ac0009
+Compiled by jdu on 2017-03-17T04:12Z
+Compiled with protoc 2.5.0
+From source with checksum 60125541c2b3e266cbf3becc5bda666
+This command was run using /usr/local/hadoop/share/hadoop/common/hadoop-common-2.8.0.jar
+</code></pre></li>
+<li><p>设置hadoop环境变量<br> 6.1. 打开hadoop用户下配置文件</p>
+<pre><code>hadoop@ubuntu16:~$ vi .bashrc
+</code></pre><p> 6.2. 编辑文件，添加如下</p>
+<pre><code>#set hadoop env begin
+export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+#set hadoop env end
+</code></pre><p> 6.3. 使文件修改生效</p>
+<pre><code>hadoop@ubuntu16:~$ source .bashrc
+</code></pre><p> 6.4. 查看hadoop版本信息（注意：与上一步骤中查看版本信息的区别）</p>
+<pre><code>hadoop@ubuntu16:~$ hadoop version
+Hadoop 2.8.0
+Subversion https://git-wip-us.apache.org/repos/asf/hadoop.git -r 91f2b7a13d1e97be65db92ddabc627cc29ac0009
+Compiled by jdu on 2017-03-17T04:12Z
+Compiled with protoc 2.5.0
+From source with checksum 60125541c2b3e266cbf3becc5bda666
+This command was run using /usr/local/hadoop/share/hadoop/common/hadoop-common-2.8.0.jar
+</code></pre></li>
+</ol>
 
       
     </div>
@@ -582,27 +645,31 @@
 
     <div class="post-spread">
       
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_tqq"></a>
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_cqq"></a>
-  <a class="jiathis_button_douban"></a>
-  <a class="jiathis_button_renren"></a>
-  <a class="jiathis_button_qzone"></a>
-  <a class="jiathis_button_kaixin001"></a>
-  <a class="jiathis_button_copy"></a>
-  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-  var jiathis_config={
-    hideMore:false
-  }
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
 
       
     </div>
@@ -759,7 +826,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建hadoop用户"><span class="nav-number">1.</span> <span class="nav-text">创建hadoop用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新apt"><span class="nav-number">2.</span> <span class="nav-text">更新apt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置ssh免密登陆"><span class="nav-number">3.</span> <span class="nav-text">配置ssh免密登陆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssh登陆localhost"><span class="nav-number">4.</span> <span class="nav-text">ssh登陆localhost</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出ssh登陆"><span class="nav-number">5.</span> <span class="nav-text">退出ssh登陆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装配置jdk"><span class="nav-number">6.</span> <span class="nav-text">安装配置jdk</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建hadoop用户"><span class="nav-number">1.</span> <span class="nav-text">创建hadoop用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新apt"><span class="nav-number">2.</span> <span class="nav-text">更新apt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置ssh免密登陆"><span class="nav-number">3.</span> <span class="nav-text">配置ssh免密登陆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装配置jdk"><span class="nav-number">4.</span> <span class="nav-text">安装配置jdk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hadoop"><span class="nav-number">5.</span> <span class="nav-text">安装hadoop</span></a></li></ol></div>
             
 
           </div>

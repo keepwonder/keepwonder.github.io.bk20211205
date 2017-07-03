@@ -93,17 +93,16 @@
 
 
 
-<meta name="description" content="Mac 和 Linux虚拟机互通开启ssh服务 查看是否安装ssh服务：ps -e | grep ssh 安装ssh服务：sudo apt-get install ssh  mac终端ssh连接Linux虚拟机:ssh user@remote[ip]">
 <meta name="keywords" content="Mac,Ubuntu,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac Connect Ubuntu In VWware Fusion">
 <meta property="og:url" content="http://yoursite.com/配置相关/Mac-Connect-Ubuntu-In-VWware-Fusion/index.html">
 <meta property="og:site_name" content="Johnathon&#39;s Blabla">
-<meta property="og:description" content="Mac 和 Linux虚拟机互通开启ssh服务 查看是否安装ssh服务：ps -e | grep ssh 安装ssh服务：sudo apt-get install ssh  mac终端ssh连接Linux虚拟机:ssh user@remote[ip]">
-<meta property="og:updated_time" content="2017-07-02T08:36:08.000Z">
+<meta property="og:image" content="http://yoursite.com/img/fusion.png">
+<meta property="og:updated_time" content="2017-07-03T13:28:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac Connect Ubuntu In VWware Fusion">
-<meta name="twitter:description" content="Mac 和 Linux虚拟机互通开启ssh服务 查看是否安装ssh服务：ps -e | grep ssh 安装ssh服务：sudo apt-get install ssh  mac终端ssh连接Linux虚拟机:ssh user@remote[ip]">
+<meta name="twitter:image" content="http://yoursite.com/img/fusion.png">
 
 
 
@@ -440,7 +439,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  143 (字)
+                  169 (字)
                 </span>
               
 
@@ -474,19 +473,31 @@
       
 
       
-        <h1 id="Mac-和-Linux虚拟机互通"><a href="#Mac-和-Linux虚拟机互通" class="headerlink" title="Mac 和 Linux虚拟机互通"></a>Mac 和 Linux虚拟机互通</h1><h2 id="开启ssh服务"><a href="#开启ssh服务" class="headerlink" title="开启ssh服务"></a>开启ssh服务</h2><ul>
-<li>查看是否安装ssh服务：ps -e | grep ssh</li>
-<li>安装ssh服务：sudo apt-get install ssh</li>
-</ul>
+        <p><img src="/img/fusion.png"><br><a id="more"></a></p>
+<h1 id="Mac-和-Linux虚拟机互通"><a href="#Mac-和-Linux虚拟机互通" class="headerlink" title="Mac 和 Linux虚拟机互通"></a>Mac 和 Linux虚拟机互通</h1><h2 id="开启ssh服务"><a href="#开启ssh服务" class="headerlink" title="开启ssh服务"></a>开启ssh服务</h2><ol>
+<li>查看是否安装ssh服务：<pre><code>ps -e | grep ssh
+</code></pre></li>
+<li>安装ssh服务：<pre><code>sudo apt-get install ssh
+</code></pre></li>
+</ol>
 <h2 id="mac终端ssh连接Linux虚拟机"><a href="#mac终端ssh连接Linux虚拟机" class="headerlink" title="mac终端ssh连接Linux虚拟机:"></a>mac终端ssh连接Linux虚拟机:</h2><p>ssh user@remote[ip] </p>
-<a id="more"></a>
 <p>为了方便使用别名<strong>sshubt</strong>登陆</p>
 <ol>
-<li>编辑mac下.bash_profile文件(需要root权限):<br>sudo vi ~/.bash_profile</li>
-<li>添加下面语句<br>alias sshubt=’ssh myusername@192.168.0.0’</li>
-<li>使用别名sshubt，输入连接到的Linux主机密码，登陆即可</li>
+<li>编辑mac下.bash_profile文件(需要root权限):<pre><code>sudo vi ~/.bash_profile
+</code></pre></li>
+<li>添加下面语句 <pre><code>alias sshubt=&apos;ssh myusername@192.168.0.0&apos;
+</code></pre></li>
+<li>使用别名sshubt，输入连接到的Linux主机密码，登陆即可<pre><code>jockie:~$ sshubt
+johnathon@192.168.140.128&apos;s password:
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.8.0-36-generic x86_64)
+</code></pre></li>
 </ol>
-<h2 id="mac上传文件址Linux虚拟机"><a href="#mac上传文件址Linux虚拟机" class="headerlink" title="mac上传文件址Linux虚拟机"></a>mac上传文件址Linux虚拟机</h2><p>scp ~/local/file user@remtoe:~/file<br>~/local/file: mac文件路径<br>user@remote:~/file: 服务器文件路径</p>
+<h2 id="mac上传文件址Linux虚拟机"><a href="#mac上传文件址Linux虚拟机" class="headerlink" title="mac上传文件址Linux虚拟机"></a>mac上传文件址Linux虚拟机</h2><ul>
+<li><pre><code>scp ~/local/file user@remtoe:~/file
+~/local/file: mac文件路径
+user@remote:~/file: 服务器文件路径
+</code></pre></li>
+</ul>
 
       
     </div>
@@ -581,27 +592,31 @@
 
     <div class="post-spread">
       
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_tqq"></a>
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_cqq"></a>
-  <a class="jiathis_button_douban"></a>
-  <a class="jiathis_button_renren"></a>
-  <a class="jiathis_button_qzone"></a>
-  <a class="jiathis_button_kaixin001"></a>
-  <a class="jiathis_button_copy"></a>
-  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-  var jiathis_config={
-    hideMore:false
-  }
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
 
       
     </div>
