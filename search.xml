@@ -12,7 +12,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Ubuntu安装并配置JDK]]></title>
+    <title><![CDATA[Ubuntu16.04 Install and Configure Oracle JDK]]></title>
     <url>%2F%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%2Fubuntu-install-jdk-without-source-everytime-open-a-new-shell%2F</url>
     <content type="text"><![CDATA[查看系统位数，终端输入： getconf LONG_BIT 下载对应版本的jdk，这里下载的是jdk-8u131-linux-x64.tar.gz 创建目录作为jdk安装目录，这里选择安装位置为：~/Java（可自行选择安装路径） sudo mkdir Java 解压文件到上一步创建的目录~/Java目录下,JDK默认下载路径为Downloads目录 cd ~/Downloads sudo tar -zxvf jdk-8u131-linux-x64.tar.gz -C ~/Java 配置系统环境变量(全局：/etc/profile|当前用户：~/.bashrc) sudo vi /etc/profile 在最后加入: ##config java environment start export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131 export JRE_HOME=${JAVA_HOME}/jre export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH ##config java environment end 修改完成后，保存并关闭，输入一下命令使环境变量生效 source /etc/profile 查看安装版本： java -version 本以为到此就结束了，结果发现每次重新打开一个terminal，就找不到java环境，搜索发现做以下配置: 配置/etc/bash.bashrc sudo vi /etc/bash.bashrc 在最后加入： ##config java environment start export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131 export JRE_HOME=${JAVA_HOME}/jre export CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib:$CLASSPATH export PATH=${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH ##config java environment end 改完成后，保存并关闭，输入一下命令使环境变量生效 source /etc/bash.bashrc 到此完成安装配置jdk。]]></content>
       <categories>
@@ -24,7 +24,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Mac Connect Ubuntu In VWware Fusion]]></title>
+    <title><![CDATA[MacPro Connect Ubuntu16.04 In VWware Fusion]]></title>
     <url>%2F%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%2FMac-Connect-Ubuntu-In-VWware-Fusion%2F</url>
     <content type="text"><![CDATA[Mac 和 Linux虚拟机互通开启ssh服务 查看是否安装ssh服务：ps -e | grep ssh 安装ssh服务：sudo apt-get install ssh mac终端ssh连接Linux虚拟机:ssh user@remote[ip] 为了方便使用别名sshubt登陆 编辑mac下.bash_profile文件(需要root权限):sudo vi ~/.bash_profile 添加下面语句 alias sshubt=&apos;ssh myusername@192.168.0.0&apos; 使用别名sshubt，输入连接到的Linux主机密码，登陆即可jockie:~$ sshubt johnathon@192.168.140.128&apos;s password: Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.8.0-36-generic x86_64) mac上传文件址Linux虚拟机 scp ~/local/file user@remtoe:~/file ~/local/file: mac文件路径 user@remote:~/file: 服务器文件路径]]></content>
       <categories>
