@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/大数据/Install-and-Configure-Hive2-1-1/index.html">
 <meta property="og:site_name" content="Johnathon&#39;s Blabla">
 <meta property="og:image" content="http://yoursite.com/img/hive.png">
-<meta property="og:updated_time" content="2017-07-08T15:53:12.000Z">
+<meta property="og:updated_time" content="2017-07-08T15:54:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Install and Configure Hive2.1.1">
 <meta name="twitter:image" content="http://yoursite.com/img/hive.png">
@@ -601,7 +601,7 @@ mysql&gt;
     &lt;value&gt;/user/hive/log&lt;/value&gt;
     &lt;description&gt;Location of Hive run time structured log file&lt;/description&gt;
 &lt;/property&gt;
-</code></pre><p>6.2 ${system:java.io.tmpdir} 和 ${system:user.name} 分别替换成 /user/local/hive/tmp 和 ${user.name}<br>6.3 mysql数据库连接信息,需要讲mysql的jar包放入hive/lib目录下</p>
+</code></pre><p>6.2 ${system:java.io.tmpdir} 和 ${system:user.name} 分别替换成 /user/local/hive/tmp 和 ${user.name}<br>6.3 mysql数据库连接信息,需要将mysql的jar包放入hive/lib目录下</p>
 <pre><code>&lt;property&gt;
     &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
     &lt;value&gt;jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true&amp;amp;characterEncoding=UTF-8&amp;amp;useSSL=false&lt;/value&gt;
