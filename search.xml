@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Probles in Using Hive]]></title>
+    <title><![CDATA[Problems in Using Hive]]></title>
     <url>%2F%E5%A4%A7%E6%95%B0%E6%8D%AE%2Fprobles-in-using-hive%2F</url>
     <content type="text"><![CDATA[在使用beeline方式连接hive时，遇到的一个坑，困扰多时，在网上也搜了好久，还好没放弃，今天终于找到了答案，在此非常感谢 [Hive]那些年我们踩过的Hive坑(如有侵犯，还望告知),我的问题就是其中的第10个问题。 Question01 问题: Error: Could not open client transport with JDBC Uri: jdbc:hive2://192.168.140.128:10000/default: Failed to open new session: java.lang.RuntimeException: org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.authorize.AuthorizationException): User: hadoop is not allowed to impersonate hive (state=08S01,code=0) 解决方法:修改hadoop 配置文件 etc/hadoop/core-site.xml,加入如下配置项 &lt;property&gt; &lt;name&gt;hadoop.proxyuser.hadoop.hosts&lt;/name&gt; &lt;value&gt;*&lt;/value&gt; &lt;description&gt;The superuser can connect only from host1 and host2 to impersonate a user&lt;/description&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;hadoop.proxyuser.hadoop.groups&lt;/name&gt; &lt;value&gt;*&lt;/value&gt; &lt;description&gt;Allow the superuser oozie to impersonate any members of the group group1 and group2&lt;/description&gt; &lt;/property&gt; 需要注意的是：hadoop.proxyuser.?.hosts 和 hadoop.proxyuser.?.groups中的 ? 和报错信息 User: ? is not allowed to impersonate hive (state=08S01,code=0)中的? 相对应，我这里是hadoop,所以我填的是hadoop.]]></content>
       <categories>
