@@ -334,6 +334,463 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/uncategorized/python-whois/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johnathon Qiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johnathon's Blabla">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/uncategorized/python-whois/" itemprop="url">whois</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-05T11:20:29+08:00">
+                2017-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/uncategorized/python-whois/" class="leancloud_visitors" data-flag-title="whois">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                 <i class="fa fa-edit"></i> 
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  294 (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2 (分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块"><a href="#在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块" class="headerlink" title="在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块"></a>在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块</h4><h2 id="step1-使用pip-install-python-whois安装whois模块"><a href="#step1-使用pip-install-python-whois安装whois模块" class="headerlink" title="step1: 使用pip install python-whois安装whois模块"></a>step1: 使用pip install python-whois安装whois模块</h2><pre><code>(/Users/jockie/install_programs/anaconda) jockie:~/programs/pycharm$ pip install python-whois
+Collecting python-whois
+  Downloading python-whois-0.6.5.tar.gz
+Collecting future (from python-whois)
+  Downloading future-0.16.0.tar.gz (824kB)
+    100% |################################| 829kB 137kB/s 
+Building wheels for collected packages: python-whois, future
+  Running setup.py bdist_wheel for python-whois ... done
+  Stored in directory: /Users/jockie/Library/Caches/pip/wheels/37/68/27/819a3f07cbe75200d8cfa74d4517fd0f402b6dd7aaf91afe8b
+  Running setup.py bdist_wheel for future ... done
+  Stored in directory: /Users/jockie/Library/Caches/pip/wheels/c2/50/7c/0d83b4baac4f63ff7a765bd16390d2ab43c93587fac9d6017a
+Successfully built python-whois future
+Installing collected packages: future, python-whois
+Successfully installed future-0.16.0 python-whois-0.6.5
+</code></pre><h2 id="step2-使用whois"><a href="#step2-使用whois" class="headerlink" title="step2: 使用whois"></a>step2: 使用whois</h2><pre><code>In [1]: import whois
+
+In [2]: whois.whois(&apos;xuanxiewu.com&apos;)
+Out[2]: 
+{&apos;address&apos;: &apos;NanJingShiYuHuaTaiQuXiShanQiaoMeiXinXiaoQu&apos;,
+ &apos;city&apos;: &apos;Nanjing&apos;,
+ &apos;country&apos;: &apos;CN&apos;,
+ &apos;creation_date&apos;: datetime.datetime(2014, 9, 28, 4, 9, 31),
+ &apos;dnssec&apos;: &apos;unsigned&apos;,
+ &apos;domain_name&apos;: [&apos;XUANXIEWU.COM&apos;, &apos;xuanxiewu.com&apos;],
+ &apos;emails&apos;: [&apos;tld@cndns.com&apos;, &apos;domain@cndns.com&apos;, &apos;1044699649@qq.com&apos;],
+ &apos;expiration_date&apos;: [datetime.datetime(2018, 9, 28, 4, 9, 31),
+  datetime.datetime(2018, 9, 28, 12, 7, 1)],
+ &apos;name&apos;: &apos;qiang jiong&apos;,
+ &apos;name_servers&apos;: [&apos;F1G1NS1.DNSPOD.NET&apos;,
+  &apos;F1G1NS2.DNSPOD.NET&apos;,
+  &apos;f1g1ns1.dnspod.net&apos;,
+  &apos;f1g1ns2.dnspod.net&apos;],
+ &apos;org&apos;: &apos;qiang jiong&apos;,
+ &apos;referral_url&apos;: None,
+ &apos;registrar&apos;: &apos;SHANGHAI MEICHENG TECHNOLOGY INFORMATION DEVELOPMENT CO., LTD.&apos;,
+ &apos;state&apos;: &apos;Jiangsu&apos;,
+ &apos;status&apos;: [&apos;clientTransferProhibited https://icann.org/epp#clientTransferProhibited&apos;,
+  &apos;ok https://icann.org/epp#ok&apos;],
+ &apos;updated_date&apos;: [datetime.datetime(2017, 6, 19, 15, 33, 50),
+  datetime.datetime(2017, 6, 19, 23, 33, 51)],
+ &apos;whois_server&apos;: &apos;grs-whois.cndns.com&apos;,
+ &apos;zipcode&apos;: &apos;210041&apos;}
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/数据分析/use-builtwith-in-python3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johnathon Qiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johnathon's Blabla">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/数据分析/use-builtwith-in-python3/" itemprop="url">Use builtwith in python3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-05T08:31:41+08:00">
+                2017-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/数据分析/use-builtwith-in-python3/" class="leancloud_visitors" data-flag-title="Use builtwith in python3">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                 <i class="fa fa-edit"></i> 
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  917 (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  5 (分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="python3中使用builtwith模块（使用工具pycharm-命令行也是pycharm自带terminal）"><a href="#python3中使用builtwith模块（使用工具pycharm-命令行也是pycharm自带terminal）" class="headerlink" title="python3中使用builtwith模块（使用工具pycharm,命令行也是pycharm自带terminal）"></a>python3中使用builtwith模块（使用工具pycharm,命令行也是pycharm自带terminal）</h2><h3 id="step1-使用pip-install-builtwith-来安装builtwith模块"><a href="#step1-使用pip-install-builtwith-来安装builtwith模块" class="headerlink" title="step1: 使用pip install builtwith 来安装builtwith模块"></a>step1: 使用pip install builtwith 来安装builtwith模块</h3><pre><code>(/Users/jockie/install_programs/anaconda) jockie:~/programs/pycharm$ pip install builtwith
+Collecting builtwith
+  Downloading builtwith-1.3.2.tar.gz
+Building wheels for collected packages: builtwith
+  Running setup.py bdist_wheel for builtwith ... done
+  Stored in directory: /Users/jockie/Library/Caches/pip/wheels/e4/cf/86/aa813feb4c79e680590a42766642b130358a01f1e26ecfe1d6
+Successfully built builtwith
+Installing collected packages: builtwith
+Successfully installed builtwith-1.3.2
+</code></pre><h3 id="step2-测试builtwith模块"><a href="#step2-测试builtwith模块" class="headerlink" title="step2: 测试builtwith模块"></a>step2: 测试builtwith模块</h3><pre><code>import builtwith
+info = builtwith.parse(&apos;http://www.xuanxiewu.com&apos;)
+print(info)
+</code></pre><p>运行代码报如下错误</p>
+<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
+Traceback (most recent call last):
+  File &quot;/Users/jockie/programs/pycharm/python_spider/chp01_01.py&quot;, line 8, in &lt;module&gt;
+    import builtwith
+  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 42
+    except Exception , e:
+                     ^
+SyntaxError: invalid syntax
+
+Process finished with exit code 1
+</code></pre><p>可以看出报的是语法错误，那为什么会有语法错误呢？原因是builtwith是基于python2.x版本的，所以这里需要做一些相应的语法修改<br>1.python2的‘Exception , e’写法不支持， 修改为Exception as e<br>2.python2的print表达式，修改为print()函数<br>3.builtwith使用的urllib2模块属于python2，python3中使用urllib,所以在<strong>init</strong>.py源码中使用urllib2的地方都需要改urllib的写法，首先需要将 import urllib2替换成</p>
+<pre><code>import urllib.request
+import urllib.error
+</code></pre><p>再将urllib2相关方法替换</p>
+<pre><code>request = urllib.request.Request(url, None, {&apos;User-Agent&apos;: user_agent})
+# request = urllib2.Request(url, None, {&apos;User-Agent&apos;: user_agent})
+response = urllib.request.urlopen(request)
+# response = urllib2.urlopen(request)
+</code></pre><p>再次运行代码,报如下错误：</p>
+<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
+Traceback (most recent call last):
+  File &quot;/Users/jockie/programs/pycharm/python_spider/chp01_01.py&quot;, line 10, in &lt;module&gt;
+    info = builtwith.parse(&apos;http://www.baidu.com&apos;)
+  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 69, in builtwith
+    if contains(html, snippet):
+  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 111, in contains
+    return re.compile(regex.split(&apos;\\;&apos;)[0], flags=re.IGNORECASE).search(v)
+TypeError: cannot use a string pattern on a bytes-like object
+
+Process finished with exit code 1
+</code></pre><p>可以看出报的是类型错误，这是因为urllib返回的数据格式已经发生了改变，需要进行转码，将下面的代码</p>
+<pre><code>if html is None:  
+    html = response.read() 
+</code></pre><p>改为</p>
+<pre><code>if html is None:  
+     html = response.read()  
+     html = html.decode(&apos;utf-8&apos;)
+</code></pre><p>再次运行代码，得到正确结果</p>
+<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
+{&apos;font-scripts&apos;: [&apos;Font Awesome&apos;, &apos;Google Font API&apos;], &apos;web-frameworks&apos;: [&apos;Twitter Bootstrap&apos;], &apos;javascript-frameworks&apos;: [&apos;jQuery&apos;]}
+
+Process finished with exit code 0
+</code></pre><p>但是，再看上面的解码使用的是utf-8，写死了，如果网站用的不是utf-8呢，这里再试验下，以www.163.com为例，使用的是gbk,再次运行，又报如下错误</p>
+<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
+Error: &apos;utf-8&apos; codec can&apos;t decode byte 0xcd in position 565: invalid continuation byte
+Traceback (most recent call last):
+  File &quot;/Users/jockie/programs/pycharm/python_spider/chp01_01.py&quot;, line 10, in &lt;module&gt;
+    info = builtwith.parse(&apos;http://www.163.com&apos;)
+  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 69, in builtwith
+    if contains(html, snippet):
+  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 111, in contains
+    return re.compile(regex.split(&apos;\\;&apos;)[0], flags=re.IGNORECASE).search(v)
+TypeError: cannot use a string pattern on a bytes-like object
+
+Process finished with exit code 1
+</code></pre><p>将编码改为gbk，得到正确结果</p>
+<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
+{&apos;web-servers&apos;: [&apos;Nginx&apos;]}
+
+Process finished with exit code 0
+</code></pre><p>那么问题来了，不同的网站编码不一定相同，如果每次换一个网站，就要改一遍编码的话，那将增加许多额外的工作量，也是不现实的，那么有没有方法做到一劳永逸呢，这里就需要引入chardet模块,同样使用：pip install chardet,将builtwith源码，做如下修改</p>
+<pre><code>if html is None:
+    html = response.read()
+    # html = html.decode(&apos;utf-8&apos;)  # add by Johnahton 20170805
+    encode_type = chardet.detect(html)
+    if encode_type[&apos;encoding&apos;] == &apos;utf-8&apos;:
+        html = html.decode(&apos;utf-8&apos;)
+    else:
+        html = html.decode(&apos;gbk&apos;)
+</code></pre><p> 加入chardet判断字符编码后，就可以一劳永逸了！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/tools/Ubuntu16-04-install-git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -475,6 +932,262 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux/a-command-a-day-002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johnathon Qiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johnathon's Blabla">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Linux/a-command-a-day-002/" itemprop="url">Linux Command Line Series：A Command A Day 002</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T11:09:46+08:00">
+                2017-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Linux/a-command-a-day-002/" class="leancloud_visitors" data-flag-title="Linux Command Line Series：A Command A Day 002">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                 <i class="fa fa-edit"></i> 
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  467 (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  3 (分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Day002-man"><a href="#Day002-man" class="headerlink" title="Day002: man"></a>Day002: man</h2><p>上一个命令介绍了help帮助命令，接下来这个命令和help有着类似的作用，那就是man命令，首先使用[man –help]命令查看手册 </p>
+<ul>
+<li><pre><code>hadoop@ubuntu16:~$ man --help
+Usage: man [OPTION...] [SECTION] PAGE...
+
+  -C, --config-file=FILE     use this user configuration file
+  -d, --debug                emit debugging messages
+  -D, --default              reset all options to their default values
+      --warnings[=WARNINGS]  enable warnings from groff
+
+ Main modes of operation:
+  -f, --whatis               equivalent to whatis
+  -k, --apropos              equivalent to apropos
+  -K, --global-apropos       search for text in all pages
+  -l, --local-file           interpret PAGE argument(s) as local filename(s)
+  -w, --where, --path, --location
+                             print physical location of man page(s)
+  -W, --where-cat, --location-cat
+                             print physical location of cat file(s)
+
+  -c, --catman               used by catman to reformat out of date cat pages
+  -R, --recode=ENCODING      output source page encoded in ENCODING
+
+ Finding manual pages:
+  -L, --locale=LOCALE        define the locale for this particular man search
+  -m, --systems=SYSTEM       use manual pages from other systems
+  -M, --manpath=PATH         set search path for manual pages to PATH
+
+  -S, -s, --sections=LIST    use colon separated section list
+
+  -e, --extension=EXTENSION  limit search to extension type EXTENSION
+
+  -i, --ignore-case          look for pages case-insensitively (default)
+  -I, --match-case           look for pages case-sensitively
+
+      --regex                show all pages matching regex
+      --wildcard             show all pages matching wildcard
+
+      --names-only           make --regex and --wildcard match page names only,
+                             not descriptions
+
+  -a, --all                  find all matching manual pages
+  -u, --update               force a cache consistency check
+
+      --no-subpages          don&apos;t try subpages, e.g. &apos;man foo bar&apos; =&gt; &apos;man
+                             foo-bar&apos;
+
+ Controlling formatted output:
+  -P, --pager=PAGER          use program PAGER to display output
+  -r, --prompt=STRING        provide the `less&apos; pager with a prompt
+
+  -7, --ascii                display ASCII translation of certain latin1 chars
+  -E, --encoding=ENCODING    use selected output encoding
+      --no-hyphenation, --nh turn off hyphenation
+      --no-justification,                              --nj   turn off justification
+  -p, --preprocessor=STRING  STRING indicates which preprocessors to run:
+                             e - [n]eqn, p - pic, t - tbl,
+g - grap, r - refer, v - vgrind
+
+  -t, --troff                use groff to format pages
+  -T, --troff-device[=DEVICE]   use groff with selected device
+
+  -H, --html[=BROWSER]       use www-browser or BROWSER to display HTML output
+  -X, --gxditview[=RESOLUTION]   use groff and display through gxditview
+                             (X11):
+                             -X = -TX75, -X100 = -TX100, -X100-12 = -TX100-12
+  -Z, --ditroff              use groff and force it to produce ditroff
+
+  -?, --help                 give this help list
+      --usage                give a short usage message
+  -V, --version              print program version
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+
+Report bugs to cjwatson@debian.org.
+</code></pre></li>
+</ul>
+<p>接下来详细介绍每一个选项参数：</p>
+
+          
         
       
     </div>
@@ -689,557 +1402,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/大数据/Ubuntu16-04-Install-Sqoop1-4-6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Johnathon Qiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Johnathon's Blabla">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/大数据/Ubuntu16-04-Install-Sqoop1-4-6/" itemprop="url">Ubuntu16.04 Install Sqoop1.4.6</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T17:38:48+08:00">
-                2017-07-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大数据/" itemprop="url" rel="index">
-                    <span itemprop="name">大数据</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/大数据/Ubuntu16-04-Install-Sqoop1-4-6/" class="leancloud_visitors" data-flag-title="Ubuntu16.04 Install Sqoop1.4.6">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                 <i class="fa fa-edit"></i> 
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  569 (字)
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  3 (分)
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="/img/sqoop.jpg" width="500" height="350"><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/大数据/Ubuntu16-04-Install-Sqoop1-4-6/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/大数据/probles-in-using-hive/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Johnathon Qiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Johnathon's Blabla">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/大数据/probles-in-using-hive/" itemprop="url">Problems in Using Hive</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T20:51:37+08:00">
-                2017-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大数据/" itemprop="url" rel="index">
-                    <span itemprop="name">大数据</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/大数据/probles-in-using-hive/" class="leancloud_visitors" data-flag-title="Problems in Using Hive">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                 <i class="fa fa-edit"></i> 
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  253 (字)
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  1 (分)
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="/img/hive_bug.jpg" width="500" height="350"><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/大数据/probles-in-using-hive/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/大数据/Install-and-Configure-Hive2-1-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Johnathon Qiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Johnathon's Blabla">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/大数据/Install-and-Configure-Hive2-1-1/" itemprop="url">Install and Configure Hive2.1.1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T22:35:04+08:00">
-                2017-07-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大数据/" itemprop="url" rel="index">
-                    <span itemprop="name">大数据</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/大数据/Install-and-Configure-Hive2-1-1/" class="leancloud_visitors" data-flag-title="Install and Configure Hive2.1.1">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                 <i class="fa fa-edit"></i> 
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  1,179 (字)
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  7 (分)
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="/img/hive.png" width="500" height="350"><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/大数据/Install-and-Configure-Hive2-1-1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1284,7 +1451,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1295,7 +1462,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1306,7 +1473,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
