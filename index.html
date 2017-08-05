@@ -445,51 +445,14 @@
 
       
         
-          
-            <h4 id="在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块"><a href="#在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块" class="headerlink" title="在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块"></a>在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块</h4><h2 id="step1-使用pip-install-python-whois安装whois模块"><a href="#step1-使用pip-install-python-whois安装whois模块" class="headerlink" title="step1: 使用pip install python-whois安装whois模块"></a>step1: 使用pip install python-whois安装whois模块</h2><pre><code>(/Users/jockie/install_programs/anaconda) jockie:~/programs/pycharm$ pip install python-whois
-Collecting python-whois
-  Downloading python-whois-0.6.5.tar.gz
-Collecting future (from python-whois)
-  Downloading future-0.16.0.tar.gz (824kB)
-    100% |################################| 829kB 137kB/s 
-Building wheels for collected packages: python-whois, future
-  Running setup.py bdist_wheel for python-whois ... done
-  Stored in directory: /Users/jockie/Library/Caches/pip/wheels/37/68/27/819a3f07cbe75200d8cfa74d4517fd0f402b6dd7aaf91afe8b
-  Running setup.py bdist_wheel for future ... done
-  Stored in directory: /Users/jockie/Library/Caches/pip/wheels/c2/50/7c/0d83b4baac4f63ff7a765bd16390d2ab43c93587fac9d6017a
-Successfully built python-whois future
-Installing collected packages: future, python-whois
-Successfully installed future-0.16.0 python-whois-0.6.5
-</code></pre><h2 id="step2-使用whois"><a href="#step2-使用whois" class="headerlink" title="step2: 使用whois"></a>step2: 使用whois</h2><pre><code>In [1]: import whois
-
-In [2]: whois.whois(&apos;xuanxiewu.com&apos;)
-Out[2]: 
-{&apos;address&apos;: &apos;NanJingShiYuHuaTaiQuXiShanQiaoMeiXinXiaoQu&apos;,
- &apos;city&apos;: &apos;Nanjing&apos;,
- &apos;country&apos;: &apos;CN&apos;,
- &apos;creation_date&apos;: datetime.datetime(2014, 9, 28, 4, 9, 31),
- &apos;dnssec&apos;: &apos;unsigned&apos;,
- &apos;domain_name&apos;: [&apos;XUANXIEWU.COM&apos;, &apos;xuanxiewu.com&apos;],
- &apos;emails&apos;: [&apos;tld@cndns.com&apos;, &apos;domain@cndns.com&apos;, &apos;1044699649@qq.com&apos;],
- &apos;expiration_date&apos;: [datetime.datetime(2018, 9, 28, 4, 9, 31),
-  datetime.datetime(2018, 9, 28, 12, 7, 1)],
- &apos;name&apos;: &apos;qiang jiong&apos;,
- &apos;name_servers&apos;: [&apos;F1G1NS1.DNSPOD.NET&apos;,
-  &apos;F1G1NS2.DNSPOD.NET&apos;,
-  &apos;f1g1ns1.dnspod.net&apos;,
-  &apos;f1g1ns2.dnspod.net&apos;],
- &apos;org&apos;: &apos;qiang jiong&apos;,
- &apos;referral_url&apos;: None,
- &apos;registrar&apos;: &apos;SHANGHAI MEICHENG TECHNOLOGY INFORMATION DEVELOPMENT CO., LTD.&apos;,
- &apos;state&apos;: &apos;Jiangsu&apos;,
- &apos;status&apos;: [&apos;clientTransferProhibited https://icann.org/epp#clientTransferProhibited&apos;,
-  &apos;ok https://icann.org/epp#ok&apos;],
- &apos;updated_date&apos;: [datetime.datetime(2017, 6, 19, 15, 33, 50),
-  datetime.datetime(2017, 6, 19, 23, 33, 51)],
- &apos;whois_server&apos;: &apos;grs-whois.cndns.com&apos;,
- &apos;zipcode&apos;: &apos;210041&apos;}
-</code></pre>
-          
+          <p><img src="/img/whois.jpeg" width="500" height="350"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/uncategorized/python-whois/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -664,92 +627,14 @@ Out[2]:
 
       
         
-          
-            <h2 id="python3中使用builtwith模块（使用工具pycharm-命令行也是pycharm自带terminal）"><a href="#python3中使用builtwith模块（使用工具pycharm-命令行也是pycharm自带terminal）" class="headerlink" title="python3中使用builtwith模块（使用工具pycharm,命令行也是pycharm自带terminal）"></a>python3中使用builtwith模块（使用工具pycharm,命令行也是pycharm自带terminal）</h2><h3 id="step1-使用pip-install-builtwith-来安装builtwith模块"><a href="#step1-使用pip-install-builtwith-来安装builtwith模块" class="headerlink" title="step1: 使用pip install builtwith 来安装builtwith模块"></a>step1: 使用pip install builtwith 来安装builtwith模块</h3><pre><code>(/Users/jockie/install_programs/anaconda) jockie:~/programs/pycharm$ pip install builtwith
-Collecting builtwith
-  Downloading builtwith-1.3.2.tar.gz
-Building wheels for collected packages: builtwith
-  Running setup.py bdist_wheel for builtwith ... done
-  Stored in directory: /Users/jockie/Library/Caches/pip/wheels/e4/cf/86/aa813feb4c79e680590a42766642b130358a01f1e26ecfe1d6
-Successfully built builtwith
-Installing collected packages: builtwith
-Successfully installed builtwith-1.3.2
-</code></pre><h3 id="step2-测试builtwith模块"><a href="#step2-测试builtwith模块" class="headerlink" title="step2: 测试builtwith模块"></a>step2: 测试builtwith模块</h3><pre><code>import builtwith
-info = builtwith.parse(&apos;http://www.xuanxiewu.com&apos;)
-print(info)
-</code></pre><p>运行代码报如下错误</p>
-<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
-Traceback (most recent call last):
-  File &quot;/Users/jockie/programs/pycharm/python_spider/chp01_01.py&quot;, line 8, in &lt;module&gt;
-    import builtwith
-  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 42
-    except Exception , e:
-                     ^
-SyntaxError: invalid syntax
-
-Process finished with exit code 1
-</code></pre><p>可以看出报的是语法错误，那为什么会有语法错误呢？原因是builtwith是基于python2.x版本的，所以这里需要做一些相应的语法修改<br>1.python2的‘Exception , e’写法不支持， 修改为Exception as e<br>2.python2的print表达式，修改为print()函数<br>3.builtwith使用的urllib2模块属于python2，python3中使用urllib,所以在<strong>init</strong>.py源码中使用urllib2的地方都需要改urllib的写法，首先需要将 import urllib2替换成</p>
-<pre><code>import urllib.request
-import urllib.error
-</code></pre><p>再将urllib2相关方法替换</p>
-<pre><code>request = urllib.request.Request(url, None, {&apos;User-Agent&apos;: user_agent})
-# request = urllib2.Request(url, None, {&apos;User-Agent&apos;: user_agent})
-response = urllib.request.urlopen(request)
-# response = urllib2.urlopen(request)
-</code></pre><p>再次运行代码,报如下错误：</p>
-<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
-Traceback (most recent call last):
-  File &quot;/Users/jockie/programs/pycharm/python_spider/chp01_01.py&quot;, line 10, in &lt;module&gt;
-    info = builtwith.parse(&apos;http://www.baidu.com&apos;)
-  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 69, in builtwith
-    if contains(html, snippet):
-  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 111, in contains
-    return re.compile(regex.split(&apos;\\;&apos;)[0], flags=re.IGNORECASE).search(v)
-TypeError: cannot use a string pattern on a bytes-like object
-
-Process finished with exit code 1
-</code></pre><p>可以看出报的是类型错误，这是因为urllib返回的数据格式已经发生了改变，需要进行转码，将下面的代码</p>
-<pre><code>if html is None:  
-    html = response.read() 
-</code></pre><p>改为</p>
-<pre><code>if html is None:  
-     html = response.read()  
-     html = html.decode(&apos;utf-8&apos;)
-</code></pre><p>再次运行代码，得到正确结果</p>
-<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
-{&apos;font-scripts&apos;: [&apos;Font Awesome&apos;, &apos;Google Font API&apos;], &apos;web-frameworks&apos;: [&apos;Twitter Bootstrap&apos;], &apos;javascript-frameworks&apos;: [&apos;jQuery&apos;]}
-
-Process finished with exit code 0
-</code></pre><p>但是，再看上面的解码使用的是utf-8，写死了，如果网站用的不是utf-8呢，这里再试验下，以www.163.com为例，使用的是gbk,再次运行，又报如下错误</p>
-<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
-Error: &apos;utf-8&apos; codec can&apos;t decode byte 0xcd in position 565: invalid continuation byte
-Traceback (most recent call last):
-  File &quot;/Users/jockie/programs/pycharm/python_spider/chp01_01.py&quot;, line 10, in &lt;module&gt;
-    info = builtwith.parse(&apos;http://www.163.com&apos;)
-  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 69, in builtwith
-    if contains(html, snippet):
-  File &quot;/Users/jockie/install_programs/anaconda/lib/python3.6/site-packages/builtwith/__init__.py&quot;, line 111, in contains
-    return re.compile(regex.split(&apos;\\;&apos;)[0], flags=re.IGNORECASE).search(v)
-TypeError: cannot use a string pattern on a bytes-like object
-
-Process finished with exit code 1
-</code></pre><p>将编码改为gbk，得到正确结果</p>
-<pre><code>/Users/jockie/install_programs/anaconda/bin/python.app /Users/jockie/programs/pycharm/python_spider/chp01_01.py
-{&apos;web-servers&apos;: [&apos;Nginx&apos;]}
-
-Process finished with exit code 0
-</code></pre><p>那么问题来了，不同的网站编码不一定相同，如果每次换一个网站，就要改一遍编码的话，那将增加许多额外的工作量，也是不现实的，那么有没有方法做到一劳永逸呢，这里就需要引入chardet模块,同样使用：pip install chardet,将builtwith源码，做如下修改</p>
-<pre><code>if html is None:
-    html = response.read()
-    # html = html.decode(&apos;utf-8&apos;)  # add by Johnahton 20170805
-    encode_type = chardet.detect(html)
-    if encode_type[&apos;encoding&apos;] == &apos;utf-8&apos;:
-        html = html.decode(&apos;utf-8&apos;)
-    else:
-        html = html.decode(&apos;gbk&apos;)
-</code></pre><p> 加入chardet判断字符编码后，就可以一劳永逸了！</p>
-
-          
+          <p><img src="/img/builtwith.jpeg" width="500" height="350"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/数据分析/use-builtwith-in-python3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
