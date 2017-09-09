@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hive," />
+  <meta name="keywords" content="hbase," />
 
 
 
@@ -93,16 +93,18 @@
 
 
 
-<meta name="keywords" content="hive">
+<meta name="keywords" content="hbase">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Problems in Using Hive">
-<meta property="og:url" content="http://yoursite.com/大数据/probles-in-using-hive/index.html">
+<meta property="og:title" content="Ubuntu16.04 Install and Configure HBase">
+<meta property="og:url" content="http://yoursite.com/BigData/Ubuntu16-04-Install-and-Configure-HBase/index.html">
 <meta property="og:site_name" content="Johnathon&#39;s Blabla">
-<meta property="og:image" content="http://yoursite.com/img/hive_bug.jpg">
-<meta property="og:updated_time" content="2017-07-16T10:15:41.000Z">
+<meta property="og:image" content="http://yoursite.com/img/hbase.jpg">
+<meta property="og:image" content="http://yoursite.com/img/hbase_01.jpg">
+<meta property="og:image" content="http://yoursite.com/img/hbase_02.jpg">
+<meta property="og:updated_time" content="2017-09-09T01:41:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Problems in Using Hive">
-<meta name="twitter:image" content="http://yoursite.com/img/hive_bug.jpg">
+<meta name="twitter:title" content="Ubuntu16.04 Install and Configure HBase">
+<meta name="twitter:image" content="http://yoursite.com/img/hbase.jpg">
 
 
 
@@ -130,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/大数据/probles-in-using-hive/"/>
+  <link rel="canonical" href="http://yoursite.com/BigData/Ubuntu16-04-Install-and-Configure-HBase/"/>
 
 
 
 
 
-  <title>Problems in Using Hive | Johnathon's Blabla</title>
+  <title>Ubuntu16.04 Install and Configure HBase | Johnathon's Blabla</title>
   
 
 
@@ -333,7 +335,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/大数据/probles-in-using-hive/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/BigData/Ubuntu16-04-Install-and-Configure-HBase/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Johnathon Qiang">
@@ -350,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Problems in Using Hive</h1>
+          <h1 class="post-title" itemprop="name headline">Ubuntu16.04 Install and Configure HBase</h1>
         
 
         <div class="post-meta">
@@ -362,8 +364,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T20:51:37+08:00">
-                2017-07-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-19T20:04:08+08:00">
+                2017-08-19
               </time>
             
 
@@ -385,8 +387,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大数据/" itemprop="url" rel="index">
-                    <span itemprop="name">大数据</span>
+                  <a href="/categories/BigData/" itemprop="url" rel="index">
+                    <span itemprop="name">BigData</span>
                   </a>
                 </span>
 
@@ -403,7 +405,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/大数据/probles-in-using-hive/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/BigData/Ubuntu16-04-Install-and-Configure-HBase/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -412,7 +414,7 @@
 
           
           
-             <span id="/大数据/probles-in-using-hive/" class="leancloud_visitors" data-flag-title="Problems in Using Hive">
+             <span id="/BigData/Ubuntu16-04-Install-and-Configure-HBase/" class="leancloud_visitors" data-flag-title="Ubuntu16.04 Install and Configure HBase">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -439,7 +441,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  253 (字)
+                  1,674 (字)
                 </span>
               
 
@@ -455,7 +457,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1 (分)
+                  9 (分)
                 </span>
               
             </div>
@@ -473,26 +475,218 @@
       
 
       
-        <p><img src="/img/hive_bug.jpg" width="500" height="350"><br><a id="more"></a></p>
-<p>在使用beeline方式连接hive时，遇到的一个坑，困扰多时，在网上也搜了好久，还好没放弃，今天终于找到了答案，在此非常感谢<strong><a href="http://blog.csdn.net/sunnyyoona/article/details/51648871" target="_blank" rel="external"> [Hive]那些年我们踩过的Hive坑</a></strong>(如有侵犯，还望告知),我的问题就是其中的第10个问题。</p>
-<h2 id="Question01"><a href="#Question01" class="headerlink" title="Question01"></a>Question01</h2><ul>
-<li><p>问题:</p>
-<pre><code>Error: Could not open client transport with JDBC Uri: jdbc:hive2://192.168.140.128:10000/default: Failed to open new session: java.lang.RuntimeException: org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.authorize.AuthorizationException): User: hadoop is not allowed to impersonate hive (state=08S01,code=0)
+        <p><img src="/img/hbase.jpg" width="500" height="300"><br><a id="more"></a></p>
+<h2 id="HBase安装"><a href="#HBase安装" class="headerlink" title="HBase安装"></a>HBase安装</h2><ol>
+<li><p>下载安装包<br>从HBase<a href="http://mirror.bit.edu.cn/apache/hbase/stable" target="_blank" rel="external">官网</a>下载最新稳定版，目前为hbase-1.2.6-bin.tar.gz</p>
+</li>
+<li><p>解压安装包<br>将安装包解压至/usr/local目录下，并重命名为hbase,并给hbase目录用户和所属组都改为hadoop</p>
+<pre><code>hadoop@ubuntu16:/usr/local$ sudo chown -R hadoop:hadoop hbase
+
+hadoop@ubuntu16:/usr/local$ ll | grep hbase
+drwxrwxr-x  9 hadoop hadoop  4096 8月  19 19:59 hbase/
+hadoop@ubuntu16:/usr/local$ cd hbase/
+hadoop@ubuntu16:/usr/local/hbase$ ll
+total 356
+drwxrwxr-x  9 hadoop hadoop   4096 8月  19 19:59 ./
+drwxr-xr-x 15 root   root     4096 8月  19 19:42 ../
+drwxr-xr-x  4 hadoop hadoop   4096 1月  29  2016 bin/
+-rw-r--r--  1 hadoop hadoop 129552 5月  29 14:29 CHANGES.txt
+drwxr-xr-x  2 hadoop hadoop   4096 8月  19 19:58 conf/
+drwxr-xr-x 12 hadoop hadoop   4096 5月  29 15:20 docs/
+drwxrwxr-x  7 hadoop hadoop   4096 8月  19 19:59 hbase-tmp/
+drwxr-xr-x  7 hadoop hadoop   4096 5月  29 14:53 hbase-webapps/
+-rw-rw-r--  1 hadoop hadoop    261 5月  29 15:31 LEGAL
+drwxrwxr-x  3 hadoop hadoop   4096 8月  19 19:41 lib/
+-rw-rw-r--  1 hadoop hadoop 143082 5月  29 15:31 LICENSE.txt
+drwxrwxr-x  2 hadoop hadoop   4096 8月  19 19:59 logs/
+-rw-rw-r--  1 hadoop hadoop  42115 5月  29 15:31 NOTICE.txt
+-rw-r--r--  1 hadoop hadoop   1477 12月 27  2015 README.txt
 </code></pre></li>
-<li><p>解决方法:<br>修改hadoop 配置文件 etc/hadoop/core-site.xml,加入如下配置项</p>
-<pre><code>&lt;property&gt; 
-    &lt;name&gt;hadoop.proxyuser.hadoop.hosts&lt;/name&gt; 
-    &lt;value&gt;*&lt;/value&gt; 
-    &lt;description&gt;The superuser can connect only from host1 and host2 to impersonate a user&lt;/description&gt;
-&lt;/property&gt; 
-&lt;property&gt; 
-    &lt;name&gt;hadoop.proxyuser.hadoop.groups&lt;/name&gt; 
-    &lt;value&gt;*&lt;/value&gt; 
-    &lt;description&gt;Allow the superuser oozie to impersonate any members of the group group1 and group2&lt;/description&gt;
-&lt;/property&gt;
+<li><p>配置安装路径<br>修改hadoop用户下.bashrc文件，添加如下:</p>
+<pre><code>export HBASE_HOME=/usr/local/hbase
+export PATH=$PATH:$HBASE_HOME/bin:$PATH
+</code></pre><p>执行source命令使修改生效:</p>
+<pre><code>hadoop@ubuntu16:~$ source .bashrc
 </code></pre></li>
-</ul>
-<p>需要注意的是：hadoop.proxyuser.?.hosts 和 hadoop.proxyuser.?.groups中的 ? 和报错信息 User: ? is not allowed to impersonate hive (state=08S01,code=0)中的? 相对应，我这里是hadoop,所以我填的是hadoop.</p>
+<li><p>验证安装是否成功</p>
+<pre><code>hadoop@ubuntu16:~$ hbase version
+HBase 1.2.6
+Source code repository file:///home/busbey/projects/hbase/hbase-assembly/target/hbase-1.2.6 revision=Unknown
+Compiled by busbey on Mon May 29 02:25:32 CDT 2017
+From source with checksum 7e8ce83a648e252758e9dae1fbe779c9
+</code></pre><p> 看到以上消息表示hbase成功安装。</p>
+</li>
+</ol>
+<h2 id="HBase单机模式"><a href="#HBase单机模式" class="headerlink" title="HBase单机模式"></a>HBase单机模式</h2><ol>
+<li><p>配置/conf/hbase-env.sh<br>配置JAVA_HOME和HBASE_MANAGES_ZK两个变量</p>
+<pre><code>export JAVA_HOME=/home/johnathon/Java/jdk1.8.0_131
+export HBASE_MANAGES_ZK=true
+</code></pre></li>
+<li><p>配置/conf/hbase-site.xml<br>在启动Hbase前需要设置属性hbase.rootdir，用于指定Hbase数据的存储位置，此处设置为HBase安装目录下的hbase-tmp文件夹即（file:///usr/local/hbase/hbase-tmp），配置如下：</p>
+<pre><code>&lt;configuration&gt;
+         &lt;property&gt;
+                 &lt;name&gt;hbase.rootdir&lt;/name&gt;
+                 &lt;value&gt;file:///usr/local/hbase/hbase-tmp&lt;/value&gt;
+         &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>启动HBase<br> 启动之前先jps查看下，这里hadoop已经运行，hbase单机模式可以不开启hadoop</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ jps
+16913 RunJar
+14580 NodeManager
+18182 Jps
+14935 JobHistoryServer
+14105 DataNode
+14459 ResourceManager
+14302 SecondaryNameNode
+13951 NameNode
+</code></pre><p> 使用start-hbase.sh脚本启动hbase</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ start-hbase.sh
+starting master, logging to /usr/local/hbase/logs/hbase-hadoop-master-ubuntu16.out
+</code></pre><p> 再jps查看下,多出个HMaster进程</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ jps
+16913 RunJar
+18307 HMaster
+14580 NodeManager
+14935 JobHistoryServer
+18615 Jps
+14105 DataNode
+14459 ResourceManager
+14302 SecondaryNameNode
+13951 NameNode
+hadoop@ubuntu16:/usr/local/hbase/conf$ jps | grep HM
+18307 HMaster
+</code></pre></li>
+<li><p>进入hbase shell<br> 进入shell模式之后，通过status命令查看运行状态，通过exit退出shell</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ hbase shell
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hbase/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+HBase Shell; enter &apos;help&lt;RETURN&gt;&apos; for list of supported commands.
+Type &quot;exit&lt;RETURN&gt;&quot; to leave the HBase Shell
+Version 1.2.6, rUnknown, Mon May 29 02:25:32 CDT 2017
+
+hbase(main):001:0&gt; status
+1 active master, 0 backup masters, 1 servers, 0 dead, 2.0000 average load
+
+hbase(main):002:0&gt; exit
+hadoop@ubuntu16:/usr/local/hbase/conf$
+</code></pre></li>
+<li><p>停止HBase</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ stop-hbase.sh
+stopping hbase.................
+hadoop@ubuntu16:/usr/local/hbase/conf$
+</code></pre></li>
+</ol>
+<h2 id="HBase伪分布式"><a href="#HBase伪分布式" class="headerlink" title="HBase伪分布式"></a>HBase伪分布式</h2><ol>
+<li><p>配置/conf/hbase-env.sh<br>添加如下</p>
+<pre><code>export HBASE_CLASSPATH=/usr/local/hadoop/conf
+</code></pre></li>
+<li><p>配置/conf/hbase-site.xml<br>修改hbase.rootdir，将其指向localhost(与hdfs的端口保持一致)，并指定HBase在HDFS上的存储路径。将属性hbase.cluter.distributed设置为true。假设当前Hadoop集群运行在伪分布式模式下，且NameNode运行在9000端口；</p>
+<pre><code>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;hbase.rootdir&lt;/name&gt;
+        &lt;value&gt;hdfs://localhost:9000/hbase&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+        &lt;value&gt;true&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>启动HBase<br> 启动之前，保证hadoop已经启动，可用jps查看进程</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ start-hbase.sh
+localhost: starting zookeeper, logging to /usr/local/hbase/bin/../logs/hbase-hadoop-zookeeper-ubuntu16.out
+starting master, logging to /usr/local/hbase/logs/hbase-hadoop-master-ubuntu16.out
+starting regionserver, logging to /usr/local/hbase/logs/hbase-hadoop-1-regionserver-ubuntu16.out
+</code></pre><p> jps查看进程</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ jps
+16913 RunJar
+14580 NodeManager
+23094 HQuorumPeer
+14935 JobHistoryServer
+23287 HRegionServer
+23160 HMaster
+23880 Jps
+14105 DataNode
+14459 ResourceManager
+14302 SecondaryNameNode
+13951 NameNode
+</code></pre><p> 再过滤下，可看出多出如下3个进程</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ jps | awk &apos;{print $2}&apos;| grep &apos;^H&apos;
+HQuorumPeer
+HRegionServer
+HMaster
+</code></pre></li>
+<li><p>进程shell模式<br>进入shell模式之后，通过list命令查看当前数据库所有表信息，通过create命令创建一个employee表，其拥有employee_id,address,info三个列族，通过describe命令查看employee表结构，通过exit命令退出HBase shell模式。</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ hbase shell
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hbase/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+HBase Shell; enter &apos;help&lt;RETURN&gt;&apos; for list of supported commands.
+Type &quot;exit&lt;RETURN&gt;&quot; to leave the HBase Shell
+Version 1.2.6, rUnknown, Mon May 29 02:25:32 CDT 2017
+
+hbase(main):001:0&gt; create &apos;employee&apos;,&apos;employee_id&apos;,&apos;address&apos;,&apos;info&apos;
+0 row(s) in 1.8040 seconds
+
+=&gt; Hbase::Table - employee
+hbase(main):006:0&gt; list
+TABLE
+employee
+1 row(s) in 0.0080 seconds
+
+=&gt; [&quot;employee&quot;]
+hbase(main):007:0&gt; describe &apos;employee&apos;
+Table employee is ENABLED
+employee
+COLUMN FAMILIES DESCRIPTION
+{NAME =&gt; &apos;address&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;, VERSIONS =&gt; &apos;1&apos;, IN_MEMORY =&gt; &apos;false&apos;,
+ KEEP_DELETED_CELLS =&gt; &apos;FALSE&apos;, DATA_BLOCK_ENCODING =&gt; &apos;NONE&apos;, TTL =&gt; &apos;FOREVER&apos;,
+ COMPRESSION =&gt; &apos;NONE&apos;, MIN_VERSIONS =&gt; &apos;0&apos;, BLOCKCACHE =&gt; &apos;true&apos;, BLOCKSIZE =&gt;
+&apos;65536&apos;, REPLICATION_SCOPE =&gt; &apos;0&apos;}
+{NAME =&gt; &apos;employee_id&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;, VERSIONS =&gt; &apos;1&apos;, IN_MEMORY =&gt; &apos;fal
+se&apos;, KEEP_DELETED_CELLS =&gt; &apos;FALSE&apos;, DATA_BLOCK_ENCODING =&gt; &apos;NONE&apos;, TTL =&gt; &apos;FOREV
+ER&apos;, COMPRESSION =&gt; &apos;NONE&apos;, MIN_VERSIONS =&gt; &apos;0&apos;, BLOCKCACHE =&gt; &apos;true&apos;, BLOCKSIZE
+ =&gt; &apos;65536&apos;, REPLICATION_SCOPE =&gt; &apos;0&apos;}
+{NAME =&gt; &apos;info&apos;, BLOOMFILTER =&gt; &apos;ROW&apos;, VERSIONS =&gt; &apos;1&apos;, IN_MEMORY =&gt; &apos;false&apos;, KE
+EP_DELETED_CELLS =&gt; &apos;FALSE&apos;, DATA_BLOCK_ENCODING =&gt; &apos;NONE&apos;, TTL =&gt; &apos;FOREVER&apos;, CO
+MPRESSION =&gt; &apos;NONE&apos;, MIN_VERSIONS =&gt; &apos;0&apos;, BLOCKCACHE =&gt; &apos;true&apos;, BLOCKSIZE =&gt; &apos;65
+536&apos;, REPLICATION_SCOPE =&gt; &apos;0&apos;}
+3 row(s) in 0.0650 seconds
+
+hbase(main):008:0&gt; exit
+hadoop@ubuntu16:/usr/local/hbase/conf$
+</code></pre></li>
+<li><p>查看HDFS的HBase数据库文件<br>通过hdfs dfs –ls /hbase命令查看HBase分布式数据库在HDFS上是否成功创建，/hbase/data/default/employee文件夹即为上一步我们所建立的employee在HDFS上的存储位置。</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ hdfs dfs -ls /hbase
+Found 8 items
+drwxr-xr-x   - hadoop supergroup          0 2017-08-19 21:36 /hbase/.tmp
+drwxr-xr-x   - hadoop supergroup          0 2017-08-19 21:36 /hbase/MasterProcWALs
+drwxr-xr-x   - hadoop supergroup          0 2017-08-19 21:26 /hbase/WALs
+drwxr-xr-x   - hadoop supergroup          0 2017-08-19 21:38 /hbase/archive
+drwxr-xr-x   - hadoop supergroup          0 2017-08-19 21:10 /hbase/data
+-rw-r--r--   1 hadoop supergroup         42 2017-08-19 21:10 /hbase/hbase.id
+-rw-r--r--   1 hadoop supergroup          7 2017-08-19 21:10 /hbase/hbase.version
+drwxr-xr-x   - hadoop supergroup          0 2017-08-19 21:36 /hbase/oldWALs
+
+hadoop@ubuntu16:/usr/local/hbase/conf$ hdfs dfs -ls /hbase/data/default
+Found 1 items
+drwxr-xr-x   - hadoop supergroup          0 2017-08-19 21:36 /hbase/data/default/employee
+</code></pre></li>
+<li><p>通过界面查看相关信息<br>主机ip:50070查看hdfs信息,如下图<br><img src="/img/hbase_01.jpg"><br>主机ip:16010查看hbase相关新，如下图<br><img src="/img/hbase_02.jpg"></p>
+</li>
+<li><p>停止HBase</p>
+<pre><code>hadoop@ubuntu16:/usr/local/hbase/conf$ stop-hbase.sh
+stopping hbase...................
+localhost: stopping zookeeper.
+hadoop@ubuntu16:/usr/local/hbase/conf$
+</code></pre></li>
+</ol>
 
       
     </div>
@@ -543,7 +737,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hive/" rel="tag"># hive</a>
+            <a href="/tags/hbase/" rel="tag"># hbase</a>
           
         </div>
       
@@ -556,8 +750,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/大数据/Install-and-Configure-Hive2-1-1/" rel="next" title="Install and Configure Hive2.1.1">
-                <i class="fa fa-chevron-left"></i> Install and Configure Hive2.1.1
+              <a href="/Linux/a-command-a-day-003/" rel="next" title="Linux Command Line Series：A Command A Day 003">
+                <i class="fa fa-chevron-left"></i> Linux Command Line Series：A Command A Day 003
               </a>
             
           </div>
@@ -566,8 +760,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/大数据/Ubuntu16-04-Install-Sqoop1-4-6/" rel="prev" title="Ubuntu16.04 Install Sqoop1.4.6">
-                Ubuntu16.04 Install Sqoop1.4.6 <i class="fa fa-chevron-right"></i>
+              <a href="/BigData/centos7-install-mysql5-7/" rel="prev" title="centos7 install mysql5.7">
+                centos7 install mysql5.7 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -764,7 +958,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Question01"><span class="nav-number">1.</span> <span class="nav-text">Question01</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HBase安装"><span class="nav-number">1.</span> <span class="nav-text">HBase安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HBase单机模式"><span class="nav-number">2.</span> <span class="nav-text">HBase单机模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HBase伪分布式"><span class="nav-number">3.</span> <span class="nav-text">HBase伪分布式</span></a></li></ol></div>
             
 
           </div>

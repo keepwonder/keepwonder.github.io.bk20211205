@@ -467,11 +467,14 @@
 
       
         
-          
-            <h2 id="import-this"><a href="#import-this" class="headerlink" title="import this"></a>import this</h2><p>The Zen of Python, by Tim Peters</p>
-<p>Beautiful is better than ugly.<br>Explicit is better than implicit.<br>Simple is better than complex.<br>Complex is better than complicated.<br>Flat is better than nested.<br>Sparse is better than dense.<br>Readability counts.<br>Special cases aren’t special enough to break the rules.<br>Although practicality beats purity.<br>Errors should never pass silently.<br>Unless explicitly silenced.<br>In the face of ambiguity, refuse the temptation to guess.<br>There should be one– and preferably only one –obvious way to do it.<br>Although that way may not be obvious at first unless you’re Dutch.<br>Now is better than never.<br>Although never is often better than <em>right</em> now.<br>If the implementation is hard to explain, it’s a bad idea.<br>If the implementation is easy to explain, it may be a good idea.<br>Namespaces are one honking great idea – let’s do more of those!</p>
-
-          
+          <p><img src="/img/python.jpeg" width="500" height="300"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Python/python001-import-this/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -513,7 +516,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/大数据/centos7-install-mysql5-7/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/BigData/centos7-install-mysql5-7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Johnathon Qiang">
@@ -532,7 +535,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/大数据/centos7-install-mysql5-7/" itemprop="url">centos7 install mysql5.7</a></h1>
+                <a class="post-title-link" href="/BigData/centos7-install-mysql5-7/" itemprop="url">centos7 install mysql5.7</a></h1>
         
 
         <div class="post-meta">
@@ -567,8 +570,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大数据/" itemprop="url" rel="index">
-                    <span itemprop="name">大数据</span>
+                  <a href="/categories/BigData/" itemprop="url" rel="index">
+                    <span itemprop="name">BigData</span>
                   </a>
                 </span>
 
@@ -584,7 +587,7 @@
 
           
           
-             <span id="/大数据/centos7-install-mysql5-7/" class="leancloud_visitors" data-flag-title="centos7 install mysql5.7">
+             <span id="/BigData/centos7-install-mysql5-7/" class="leancloud_visitors" data-flag-title="centos7 install mysql5.7">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -646,200 +649,14 @@
 
       
         
-          
-            <h2 id="卸载系统自带的Mariadb"><a href="#卸载系统自带的Mariadb" class="headerlink" title="卸载系统自带的Mariadb"></a>卸载系统自带的Mariadb</h2><pre><code>[root@localhost ~]# rpm -qa | grep mariadb
-mariadb-libs-5.5.52-1.el7.x86_64
-[root@localhost ~]# rpm -e --nodeps mariadb-libs-5.5.52-1.el7.x86_64
-[root@localhost ~]# rpm -qa | grep mariadb
-[root@localhost ~]#
-</code></pre><h2 id="删除etc目录下的my-cnf文件"><a href="#删除etc目录下的my-cnf文件" class="headerlink" title="删除etc目录下的my.cnf文件"></a>删除etc目录下的my.cnf文件</h2><pre><code>[root@localhost ~]# rm /etc/my.cnf
-rm: cannot remove ‘/etc/my.cnf’: No such file or directory
-[root@localhost ~]#
-</code></pre><h2 id="检查mysql是否存在"><a href="#检查mysql是否存在" class="headerlink" title="检查mysql是否存在"></a>检查mysql是否存在</h2><pre><code>[root@localhost ~]# rpm -qa | grep mysql
-[root@localhost ~]#
-</code></pre><h2 id="检查mysql组和用户是否存在，如无创建"><a href="#检查mysql组和用户是否存在，如无创建" class="headerlink" title="检查mysql组和用户是否存在，如无创建"></a>检查mysql组和用户是否存在，如无创建</h2><pre><code>[root@localhost ~]# cat /etc/group | grep mysql
-[root@localhost ~]# cat /etc/passwd | grep mysql
-[root@localhost ~]#
-</code></pre><h2 id="创建mysql用户组"><a href="#创建mysql用户组" class="headerlink" title="创建mysql用户组"></a>创建mysql用户组</h2><pre><code>[root@localhost ~]# groupadd mysql
-[root@localhost ~]# cat /etc/group | grep mysql
-mysql:x:1001:
-</code></pre><h2 id="创建一个用户名为mysql的用户并加入mysql用户组"><a href="#创建一个用户名为mysql的用户并加入mysql用户组" class="headerlink" title="创建一个用户名为mysql的用户并加入mysql用户组"></a>创建一个用户名为mysql的用户并加入mysql用户组</h2><pre><code>[root@localhost ~]# useradd -g mysql mysql
-[root@localhost ~]# cat /etc/passwd | grep mysql
-mysql:x:1001:1001::/home/mysql:/bin/bash
-[root@localhost ~]#
-</code></pre><h2 id="指定password-为-mysql"><a href="#指定password-为-mysql" class="headerlink" title="指定password 为 mysql"></a>指定password 为 mysql</h2><pre><code>[root@localhost ~]# passwd mysql
-Changing password for user mysql.
-New password:
-BAD PASSWORD: The password is shorter than 8 characters
-Retype new password:
-passwd: all authentication tokens updated successfully.
-[root@localhost ~]#
-</code></pre><h2 id="将mysql安装到-usr-local-bigdata下"><a href="#将mysql安装到-usr-local-bigdata下" class="headerlink" title="将mysql安装到/usr/local/bigdata下"></a>将mysql安装到/usr/local/bigdata下</h2><pre><code>[root@localhost bigdata]# ll
-total 625636
-drwxr-xr-x. 10 hd   hd         161 Aug 27 01:24 hadoop
-drwxr-xr-x.  8 hd   hd         255 Mar 15 04:35 jdk1.8
--rw-r--r--.  1 root root 640650826 Aug 27 05:55 mysql-5.7.19-linux-glibc2.12-x86_64.tar.gz
-[root@localhost bigdata]# tar -zxf mysql-5.7.19-linux-glibc2.12-x86_64.tar.gz
-[root@localhost bigdata]# ll
-total 625636
-drwxr-xr-x. 10 hd   hd         161 Aug 27 01:24 hadoop
-drwxr-xr-x.  8 hd   hd         255 Mar 15 04:35 jdk1.8
-drwxr-xr-x.  9 root root       129 Aug 27 05:57 mysql-5.7.19-linux-glibc2.12-x86_64
--rw-r--r--.  1 root root 640650826 Aug 27 05:55 mysql-5.7.19-linux-glibc2.12-x86_64.tar.gz
-[root@localhost bigdata]# mv mysql-5.7.19-linux-glibc2.12-x86_64 mysql57
-[root@localhost bigdata]# ll
-total 625636
-drwxr-xr-x. 10 hd   hd         161 Aug 27 01:24 hadoop
-drwxr-xr-x.  8 hd   hd         255 Mar 15 04:35 jdk1.8
-drwxr-xr-x.  9 root root       129 Aug 27 05:57 mysql57
--rw-r--r--.  1 root root 640650826 Aug 27 05:55 mysql-5.7.19-linux-glibc2.12-x86_64.tar.gz
-[root@localhost]
-
-## 更改所属的组和用户
-[root@localhost bigdata]# chown -R mysql mysql57/
-[root@localhost bigdata]# ll
-total 0
-drwxr-xr-x. 10 hd    hd   161 Aug 27 01:24 hadoop
-drwxr-xr-x.  8 hd    hd   255 Mar 15 04:35 jdk1.8
-drwxr-xr-x.  9 mysql root 129 Aug 27 05:57 mysql57
-[root@localhost bigdata]# chgrp -R mysql mysql57/
-[root@localhost bigdata]# ll
-total 0
-drwxr-xr-x. 10 hd    hd    161 Aug 27 01:24 hadoop
-drwxr-xr-x.  8 hd    hd    255 Mar 15 04:35 jdk1.8
-drwxr-xr-x.  9 mysql mysql 129 Aug 27 05:57 mysql57
-
-root@localhost mysql57]# mkdir data
-[root@localhost mysql57]# chown -R mysql:mysql data
-[root@localhost mysql57]# ll
-total 36
-drwxr-xr-x.  2 mysql mysql  4096 Aug 27 05:57 bin
--rw-r--r--.  1 mysql mysql 17987 Jun 22 10:13 COPYING
-drwxr-xr-x.  2 mysql mysql     6 Aug 27 06:02 data
-drwxr-xr-x.  2 mysql mysql    55 Aug 27 05:57 docs
-drwxr-xr-x.  3 mysql mysql  4096 Aug 27 05:57 include
-drwxr-xr-x.  5 mysql mysql   229 Aug 27 05:57 lib
-drwxr-xr-x.  4 mysql mysql    30 Aug 27 05:57 man
--rw-r--r--.  1 mysql mysql  2478 Jun 22 10:13 README
-drwxr-xr-x. 28 mysql mysql  4096 Aug 27 05:57 share
-drwxr-xr-x.  2 mysql mysql    90 Aug 27 05:57 support-files
-[root@localhost mysql57]#
-</code></pre><h2 id="在etc下新建配置文件my-cnf，并在该文件内添加以下配置"><a href="#在etc下新建配置文件my-cnf，并在该文件内添加以下配置" class="headerlink" title="在etc下新建配置文件my.cnf，并在该文件内添加以下配置"></a>在etc下新建配置文件my.cnf，并在该文件内添加以下配置</h2><pre><code>[mysql]
-# 设置mysql客户端默认字符集
-default-character-set=utf8 
-[mysqld]
-skip-name-resolve
-#设置3306端口
-port = 3306 
-# 设置mysql的安装目录
-basedir=/usr/local/bigdata/mysql57
-# 设置mysql数据库的数据的存放目录
-datadir=/usr/local/bigdata/mysql57/data
-# 允许最大连接数
-max_connections=200
-# 服务端使用的字符集默认为8比特编码的latin1字符集
-character-set-server=utf8
-# 创建新表时将使用的默认存储引擎
-default-storage-engine=INNODB 
-lower_case_table_names=1
-max_allowed_packet=16M
-</code></pre><h2 id="安装和初始化"><a href="#安装和初始化" class="headerlink" title="安装和初始化"></a>安装和初始化</h2><pre><code>[root@localhost mysql57]# bin/mysql_install_db --user=mysql --basedir=/usr/local/bigdata/mysql57 --datadir=/usr/local/bigdata/mysql57/data/
-2017-08-27 06:08:18 [WARNING] mysql_install_db is deprecated. Please consider switching to mysqld --initialize
-2017-08-27 06:08:20 [WARNING] The bootstrap log isn&apos;t empty:
-2017-08-27 06:08:20 [WARNING] 2017-08-27T10:08:18.703344Z 0 [Warning] --bootstrap is deprecated. Please consider using --initialize instead
-2017-08-27T10:08:18.705509Z 0 [Warning] Changed limits: max_open_files: 1024 (requested 5000)
-2017-08-27T10:08:18.705523Z 0 [Warning] Changed limits: table_open_cache: 407 (requested 2000)
-
-[root@localhost mysql57]#
-
-
-[root@localhost mysql57]# cp ./support-files/mysql.server /etc/init.d/mysqld
-[root@localhost mysql57]# chown 777 /etc/my.cnf
-[root@localhost mysql57]# chmod +x /etc/init.d/mysqld
-
-[root@localhost mysql57]# /etc/init.d/mysqld restart
- ERROR! MySQL server PID file could not be found!
-Starting MySQL.Logging to &apos;/usr/local/bigdata/mysql57/data/localhost.localdomain.err&apos;.
- SUCCESS!
-</code></pre><h2 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h2><pre><code> [root@localhost mysql57]# chkconfig --level 35 mysqld on
- [root@localhost mysql57]# chkconfig --list mysqld
-
-Note: This output shows SysV services only and does not include native
-      systemd services. SysV configuration data might be overridden by native
-      systemd configuration.
-
-      If you want to list systemd services use &apos;systemctl list-unit-files&apos;.
-      To see services enabled on particular target use
-      &apos;systemctl list-dependencies [target]&apos;.
-
-mysqld             0:off    1:off    2:on    3:on    4:on    5:on    6:off
-[root@localhost mysql57]# chmod +x /etc/rc.d/init.d/mysqld
-[root@localhost mysql57]# chkconfig --add mysqld
-[root@localhost mysql57]# chkconfig --list mysqld
-
-Note: This output shows SysV services only and does not include native
-      systemd services. SysV configuration data might be overridden by native
-      systemd configuration.
-
-      If you want to list systemd services use &apos;systemctl list-unit-files&apos;.
-      To see services enabled on particular target use
-      &apos;systemctl list-dependencies [target]&apos;.
-
-mysqld             0:off    1:off    2:on    3:on    4:on    5:on    6:off
-[root@localhost mysql57]# service mysqld status
- SUCCESS! MySQL running (4822)
-[root@localhost mysql57]#
-</code></pre><h2 id="设置-etc-profile"><a href="#设置-etc-profile" class="headerlink" title="设置/etc/profile/"></a>设置/etc/profile/</h2><pre><code>export PATH=$PATH:/usr/local/bigdata/mysql557/bin
-</code></pre><h2 id="获得初始密码"><a href="#获得初始密码" class="headerlink" title="获得初始密码"></a>获得初始密码</h2><pre><code>[root@localhost mysql57]# cat /root/.mysql_secret
-# Password set for user &apos;root@localhost&apos; at 2017-08-27 06:08:18
-zm&amp;nSHM5Etpw
-</code></pre><h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><pre><code>root@localhost mysql57]# mysql -uroot -p
-Enter password:
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 4
-Server version: 5.7.19
-
-Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
-
-mysql&gt; set PASSWORD = PASSWORD(&apos;root&apos;)
-    -&gt; ;
-Query OK, 0 rows affected, 1 warning (0.01 sec)
-
-mysql&gt; flush privileges;
-Query OK, 0 rows affected (0.00 sec)
-
-mysql&gt;
-</code></pre><h2 id="添加远程访问权限"><a href="#添加远程访问权限" class="headerlink" title="添加远程访问权限"></a>添加远程访问权限</h2><pre><code>mysql&gt; use mysql
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
-
-Database changed
-mysql&gt; update user set host=&apos;%&apos; where user=&apos;root&apos;;
-Query OK, 1 row affected (0.00 sec)
-Rows matched: 1  Changed: 1  Warnings: 0
-
-mysql&gt; select host,user from user;
-+-----------+---------------+
-| host      | user          |
-+-----------+---------------+
-| %         | root          |
-| localhost | mysql.session |
-| localhost | mysql.sys     |
-+-----------+---------------+
-3 rows in set (0.00 sec)
-</code></pre><h2 id="重启生效"><a href="#重启生效" class="headerlink" title="重启生效"></a>重启生效</h2><pre><code>[root@localhost mysql57]# systemctl restart mysql.service
-[root@localhost mysql57]# /etc/init.d/mysqld restart
-Shutting down MySQL.. SUCCESS!
-Starting MySQL. SUCCESS!
-</code></pre><h2 id="为了在任何目录下可以登录mysql"><a href="#为了在任何目录下可以登录mysql" class="headerlink" title="为了在任何目录下可以登录mysql"></a>为了在任何目录下可以登录mysql</h2><pre><code>[root@localhost mysql57]# ln -s /usr/local/bigdata/mysql57/bin/mysql   /usr/bin/mysql
-</code></pre>
-          
+          <p><img src="/img/mysql.jpeg" width="500" height="300"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/BigData/centos7-install-mysql5-7/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -881,7 +698,7 @@ Starting MySQL. SUCCESS!
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/大数据/Ubuntu16-04-Install-and-Configure-HBase/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/BigData/Ubuntu16-04-Install-and-Configure-HBase/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Johnathon Qiang">
@@ -900,7 +717,7 @@ Starting MySQL. SUCCESS!
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/大数据/Ubuntu16-04-Install-and-Configure-HBase/" itemprop="url">Ubuntu16.04 Install and Configure HBase</a></h1>
+                <a class="post-title-link" href="/BigData/Ubuntu16-04-Install-and-Configure-HBase/" itemprop="url">Ubuntu16.04 Install and Configure HBase</a></h1>
         
 
         <div class="post-meta">
@@ -935,8 +752,8 @@ Starting MySQL. SUCCESS!
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大数据/" itemprop="url" rel="index">
-                    <span itemprop="name">大数据</span>
+                  <a href="/categories/BigData/" itemprop="url" rel="index">
+                    <span itemprop="name">BigData</span>
                   </a>
                 </span>
 
@@ -952,7 +769,7 @@ Starting MySQL. SUCCESS!
 
           
           
-             <span id="/大数据/Ubuntu16-04-Install-and-Configure-HBase/" class="leancloud_visitors" data-flag-title="Ubuntu16.04 Install and Configure HBase">
+             <span id="/BigData/Ubuntu16-04-Install-and-Configure-HBase/" class="leancloud_visitors" data-flag-title="Ubuntu16.04 Install and Configure HBase">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1017,7 +834,7 @@ Starting MySQL. SUCCESS!
           <p><img src="/img/hbase.jpg" width="500" height="300"><br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/大数据/Ubuntu16-04-Install-and-Configure-HBase/#more" rel="contents">
+            <a class="btn" href="/BigData/Ubuntu16-04-Install-and-Configure-HBase/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
