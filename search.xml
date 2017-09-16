@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MacOS install scrapy]]></title>
+    <url>%2Fpython%2FMacOS-install-scrapy%2F</url>
+    <content type="text"><![CDATA[环境系统版本：macOS Sierra 10.12.6python版本：Python3 安装步骤 step1：安装homebrew /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; step2：安装wget brew install wget step3：安装command line tools xcode-select --install 安装pip wget https://bootstrap.pypa.io/get-pip.py python get-pip.py it’s a important step 重新启动Mac OS 重启时按住Command+R，进入Recovery模式 在Recovery模式中输入: csrutil disable; 重新启动，回到Mac OS step5：安装scrapy sudo -H pip install Scrapy step6：查看版本信息 scarpy version]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python001-import this]]></title>
-    <url>%2FPython%2Fpython001-import-this%2F</url>
+    <url>%2Fpython%2Fpython001-import-this%2F</url>
     <content type="text"><![CDATA[import thisThe Zen of Python, by Tim Peters Beautiful is better than ugly.Explicit is better than implicit.Simple is better than complex.Complex is better than complicated.Flat is better than nested.Sparse is better than dense.Readability counts.Special cases aren’t special enough to break the rules.Although practicality beats purity.Errors should never pass silently.Unless explicitly silenced.In the face of ambiguity, refuse the temptation to guess.There should be one– and preferably only one –obvious way to do it.Although that way may not be obvious at first unless you’re Dutch.Now is better than never.Although never is often better than right now.If the implementation is hard to explain, it’s a bad idea.If the implementation is easy to explain, it may be a good idea.Namespaces are one honking great idea – let’s do more of those!]]></content>
       <categories>
-        <category>Python</category>
+        <category>python</category>
       </categories>
   </entry>
   <entry>
@@ -44,10 +55,10 @@
   <entry>
     <title><![CDATA[whois]]></title>
     <url>%2Funcategorized%2Fpython-whois%2F</url>
-    <content type="text"><![CDATA[在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这是酒可以用到whois这个模块step1: 使用pip install python-whois安装whois模块(/Users/jockie/install_programs/anaconda) jockie:~/programs/pycharm$ pip install python-whois Collecting python-whois Downloading python-whois-0.6.5.tar.gz Collecting future (from python-whois) Downloading future-0.16.0.tar.gz (824kB) 100% |################################| 829kB 137kB/s Building wheels for collected packages: python-whois, future Running setup.py bdist_wheel for python-whois ... done Stored in directory: /Users/jockie/Library/Caches/pip/wheels/37/68/27/819a3f07cbe75200d8cfa74d4517fd0f402b6dd7aaf91afe8b Running setup.py bdist_wheel for future ... done Stored in directory: /Users/jockie/Library/Caches/pip/wheels/c2/50/7c/0d83b4baac4f63ff7a765bd16390d2ab43c93587fac9d6017a Successfully built python-whois future Installing collected packages: future, python-whois Successfully installed future-0.16.0 python-whois-0.6.5 step2: 使用whoisIn [1]: import whois In [2]: whois.whois(&apos;xuanxiewu.com&apos;) Out[2]: {&apos;address&apos;: &apos;NanJingShiYuHuaTaiQuXiShanQiaoMeiXinXiaoQu&apos;, &apos;city&apos;: &apos;Nanjing&apos;, &apos;country&apos;: &apos;CN&apos;, &apos;creation_date&apos;: datetime.datetime(2014, 9, 28, 4, 9, 31), &apos;dnssec&apos;: &apos;unsigned&apos;, &apos;domain_name&apos;: [&apos;XUANXIEWU.COM&apos;, &apos;xuanxiewu.com&apos;], &apos;emails&apos;: [&apos;tld@cndns.com&apos;, &apos;domain@cndns.com&apos;, &apos;1044699649@qq.com&apos;], &apos;expiration_date&apos;: [datetime.datetime(2018, 9, 28, 4, 9, 31), datetime.datetime(2018, 9, 28, 12, 7, 1)], &apos;name&apos;: &apos;qiang jiong&apos;, &apos;name_servers&apos;: [&apos;F1G1NS1.DNSPOD.NET&apos;, &apos;F1G1NS2.DNSPOD.NET&apos;, &apos;f1g1ns1.dnspod.net&apos;, &apos;f1g1ns2.dnspod.net&apos;], &apos;org&apos;: &apos;qiang jiong&apos;, &apos;referral_url&apos;: None, &apos;registrar&apos;: &apos;SHANGHAI MEICHENG TECHNOLOGY INFORMATION DEVELOPMENT CO., LTD.&apos;, &apos;state&apos;: &apos;Jiangsu&apos;, &apos;status&apos;: [&apos;clientTransferProhibited https://icann.org/epp#clientTransferProhibited&apos;, &apos;ok https://icann.org/epp#ok&apos;], &apos;updated_date&apos;: [datetime.datetime(2017, 6, 19, 15, 33, 50), datetime.datetime(2017, 6, 19, 23, 33, 51)], &apos;whois_server&apos;: &apos;grs-whois.cndns.com&apos;, &apos;zipcode&apos;: &apos;210041&apos;}]]></content>
+    <content type="text"><![CDATA[在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这时就可以用到whois这个模块step1: 使用pip install python-whois安装whois模块(/Users/jockie/install_programs/anaconda) jockie:~/programs/pycharm$ pip install python-whois Collecting python-whois Downloading python-whois-0.6.5.tar.gz Collecting future (from python-whois) Downloading future-0.16.0.tar.gz (824kB) 100% |################################| 829kB 137kB/s Building wheels for collected packages: python-whois, future Running setup.py bdist_wheel for python-whois ... done Stored in directory: /Users/jockie/Library/Caches/pip/wheels/37/68/27/819a3f07cbe75200d8cfa74d4517fd0f402b6dd7aaf91afe8b Running setup.py bdist_wheel for future ... done Stored in directory: /Users/jockie/Library/Caches/pip/wheels/c2/50/7c/0d83b4baac4f63ff7a765bd16390d2ab43c93587fac9d6017a Successfully built python-whois future Installing collected packages: future, python-whois Successfully installed future-0.16.0 python-whois-0.6.5 step2: 使用whoisIn [1]: import whois In [2]: whois.whois(&apos;xuanxiewu.com&apos;) Out[2]: {&apos;address&apos;: &apos;NanJingShiYuHuaTaiQuXiShanQiaoMeiXinXiaoQu&apos;, &apos;city&apos;: &apos;Nanjing&apos;, &apos;country&apos;: &apos;CN&apos;, &apos;creation_date&apos;: datetime.datetime(2014, 9, 28, 4, 9, 31), &apos;dnssec&apos;: &apos;unsigned&apos;, &apos;domain_name&apos;: [&apos;XUANXIEWU.COM&apos;, &apos;xuanxiewu.com&apos;], &apos;emails&apos;: [&apos;tld@cndns.com&apos;, &apos;domain@cndns.com&apos;, &apos;1044699649@qq.com&apos;], &apos;expiration_date&apos;: [datetime.datetime(2018, 9, 28, 4, 9, 31), datetime.datetime(2018, 9, 28, 12, 7, 1)], &apos;name&apos;: &apos;qiang jiong&apos;, &apos;name_servers&apos;: [&apos;F1G1NS1.DNSPOD.NET&apos;, &apos;F1G1NS2.DNSPOD.NET&apos;, &apos;f1g1ns1.dnspod.net&apos;, &apos;f1g1ns2.dnspod.net&apos;], &apos;org&apos;: &apos;qiang jiong&apos;, &apos;referral_url&apos;: None, &apos;registrar&apos;: &apos;SHANGHAI MEICHENG TECHNOLOGY INFORMATION DEVELOPMENT CO., LTD.&apos;, &apos;state&apos;: &apos;Jiangsu&apos;, &apos;status&apos;: [&apos;clientTransferProhibited https://icann.org/epp#clientTransferProhibited&apos;, &apos;ok https://icann.org/epp#ok&apos;], &apos;updated_date&apos;: [datetime.datetime(2017, 6, 19, 15, 33, 50), datetime.datetime(2017, 6, 19, 23, 33, 51)], &apos;whois_server&apos;: &apos;grs-whois.cndns.com&apos;, &apos;zipcode&apos;: &apos;210041&apos;}]]></content>
       <tags>
         <tag>spider</tag>
-        <tag>python3</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -59,7 +70,7 @@
       </categories>
       <tags>
         <tag>spider</tag>
-        <tag>python3</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
