@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[MacOS install scrapy]]></title>
     <url>%2Fpython%2FMacOS-install-scrapy%2F</url>
-    <content type="text"><![CDATA[环境系统版本：macOS Sierra 10.12.6python版本：Python3 安装步骤 安装homebrew /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安装wget brew install wget 安装command line tools xcode-select --install 安装pip wget https://bootstrap.pypa.io/get-pip.py python get-pip.py it’s a important step 重新启动Mac OS 重启时按住Command+R，进入Recovery模式 在Recovery模式中输入: csrutil disable; 重新启动，回到Mac OS 安装scrapy sudo -H pip install Scrapy 查看版本信息 scarpy version]]></content>
+    <content type="text"><![CDATA[环境系统版本：macOS Sierra 10.12.6python版本：Python3 安装步骤 安装homebrew /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安装wget brew install wget 安装command line tools xcode-select --install 安装pip wget https://bootstrap.pypa.io/get-pip.py python get-pip.py It’s an important step 重新启动Mac OS 重启时按住Command+R，进入Recovery模式 在Recovery模式中输入: csrutil disable; 重新启动，回到Mac OS 安装scrapy sudo -H pip install Scrapy 查看版本信息 scarpy version]]></content>
       <categories>
         <category>python</category>
       </categories>
