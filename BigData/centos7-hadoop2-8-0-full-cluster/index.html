@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hadoop," />
 
 
 
@@ -93,15 +93,16 @@
 
 
 
-<meta name="description" content="Now You See Me!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Johnathon&#39;s Blabla">
-<meta property="og:url" content="http://yoursite.com/categories/Linux/index.html">
+<meta name="keywords" content="hadoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7+hadoop2.8.0 full cluster">
+<meta property="og:url" content="http://yoursite.com/BigData/centos7-hadoop2-8-0-full-cluster/index.html">
 <meta property="og:site_name" content="Johnathon&#39;s Blabla">
-<meta property="og:description" content="Now You See Me!">
+<meta property="og:image" content="http://yoursite.com/img/hadoop.jpeg">
+<meta property="og:updated_time" content="2017-09-19T03:16:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Johnathon&#39;s Blabla">
-<meta name="twitter:description" content="Now You See Me!">
+<meta name="twitter:title" content="centos7+hadoop2.8.0 full cluster">
+<meta name="twitter:image" content="http://yoursite.com/img/hadoop.jpeg">
 
 
 
@@ -129,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Linux/"/>
+  <link rel="canonical" href="http://yoursite.com/BigData/centos7-hadoop2-8-0-full-cluster/"/>
 
 
 
 
 
-  <title>分类: Linux | Johnathon's Blabla</title>
+  <title>centos7+hadoop2.8.0 full cluster | Johnathon's Blabla</title>
   
 
 
@@ -172,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
 <a href="https://github.com/keepwonder"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
@@ -322,101 +323,458 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>Linux<small>分类</small>
-      </h1>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Linux/a-command-a-day-003/" itemprop="url">
-              
-                <span itemprop="name">Linux Command Line Series：A Command A Day 003</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-16T20:47:58+08:00"
-              content="2017-08-16" >
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Linux/a-command-a-day-002/" itemprop="url">
-              
-                <span itemprop="name">Linux Command Line Series：A Command A Day 002</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-21T11:09:46+08:00"
-              content="2017-07-21" >
-          07-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Linux/a-command-a-day-001/" itemprop="url">
-              
-                <span itemprop="name">Linux Command Line Series：A Command A Day 001</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-04T21:00:45+08:00"
-              content="2017-07-04" >
-          07-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/BigData/centos7-hadoop2-8-0-full-cluster/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johnathon Qiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johnathon's Blabla">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">centos7+hadoop2.8.0 full cluster</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T10:32:22+08:00">
+                2017-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BigData/" itemprop="url" rel="index">
+                    <span itemprop="name">BigData</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/BigData/centos7-hadoop2-8-0-full-cluster/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="BigData/centos7-hadoop2-8-0-full-cluster/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/BigData/centos7-hadoop2-8-0-full-cluster/" class="leancloud_visitors" data-flag-title="centos7+hadoop2.8.0 full cluster">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                 <i class="fa fa-edit"></i> 
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  811 (字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  5 (分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/img/hadoop.jpeg"><br><a id="more"></a></p>
+<h1 id="hadoop完全分布式安装"><a href="#hadoop完全分布式安装" class="headerlink" title="hadoop完全分布式安装"></a>hadoop完全分布式安装</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ol>
+<li>主机：3台centos7主机，用户名和密码都设置为root/root，hd/hd</li>
+<li>hadoop版本：hadoop2.8.0</li>
+<li>jdk版本：java1.8.0</li>
+</ol>
+<h2 id="配置节点"><a href="#配置节点" class="headerlink" title="配置节点"></a>配置节点</h2><ol>
+<li><p>设置主机ip</p>
+<p> 主机              IP             对应角色<br> master    192.168.140.135       namendoe<br> slave1    192.168.140.136       datanode<br> slave2    192.168.140.137       datanode</p>
+</li>
+<li><p>永久修改hostname 分别设为</p>
+<p> hostnamectl set-hostname  master<br> hostnamectl set-hostname  slave1<br> hostnamectl set-hostname  slave2</p>
+</li>
+<li><p>设置 /etc/hosts文件 ，添加如下</p>
+<p> 192.168.140.135 master<br> 192.168.140.136 slave1<br> 192.168.140.137 slave2</p>
+</li>
+</ol>
+<h2 id="查看java版本-确保java已经安装"><a href="#查看java版本-确保java已经安装" class="headerlink" title="查看java版本,确保java已经安装"></a>查看java版本,确保java已经安装</h2><pre><code>[hd@master bigdata]$ java -version
+java version &quot;1.8.0_131&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_131-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.131-b11, mixed mode)
+[hd@master bigdata]$
+</code></pre><h2 id="关闭防火墙，关闭firewall"><a href="#关闭防火墙，关闭firewall" class="headerlink" title="关闭防火墙，关闭firewall"></a>关闭防火墙，关闭firewall</h2><ol>
+<li><p>查看防火墙状态</p>
+<p> [root@master ~]# firewall-cmd –state<br> running</p>
+</li>
+<li><p>停止服务</p>
+<p> [root@master ~]# systemctl stop firewalld.service<br> [root@master ~]# firewall-cmd –state<br> not running</p>
+</li>
+<li><p>禁用防火墙</p>
+<p> [root@master ~]# systemctl disable firewalld.service<br> Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.<br> Removed symlink /etc/systemd/system/basic.target.wants/firewalld.service.<br> [root@master ~]# firewall-cmd –state<br> not running</p>
+</li>
+</ol>
+<h2 id="hd作为大数据环境用户，给hd用户增加sudo权限"><a href="#hd作为大数据环境用户，给hd用户增加sudo权限" class="headerlink" title="hd作为大数据环境用户，给hd用户增加sudo权限"></a>hd作为大数据环境用户，给hd用户增加sudo权限</h2><pre><code>[root@master ~]# ll /etc/sudoers
+-r-xr-----. 1 root root 3907 Nov  4  2016 /etc/sudoers
+[root@master ~]# chmod u+w /etc/sudoers
+[root@master ~]# vi /etc/sudoers
+    ## Allow root to run any commands anywhere
+    root    ALL=(ALL)       ALL
+    hd      ALL=(ALL)NOPASSWD:ALL
+[root@master ~]# chmod u-w /etc/sudoers
+</code></pre><p>切换到hd用户下,配置SSH免密码登录</p>
+<pre><code>ssh-keygen  -t   rsa   -P  &apos;&apos;
+cp id_rsa.pub authorized_keys
+</code></pre><h2 id="配置jdk"><a href="#配置jdk" class="headerlink" title="配置jdk"></a>配置jdk</h2><pre><code>[hd@master bigdata]$ sudo vi /etc/profile
+
+export JAVA_HOME=/usr/local/bigdata/jdk1.8
+export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib/
+export PATH=$PATH:$JAVA_HOME/bin
+</code></pre><h2 id="配置Hadoop"><a href="#配置Hadoop" class="headerlink" title="配置Hadoop"></a>配置Hadoop</h2><ol>
+<li><p>编辑hadoop-env.sh</p>
+<pre><code>#The java implementation to use.
+export JAVA_HOME=/usr/local/bigdata/jdk1.8
+</code></pre></li>
+<li><p>编辑core-site.xml</p>
+<pre><code>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+        &lt;value&gt;/hd/hadoop/tmp&lt;/value&gt;
+        &lt;description&gt;Abase for other temporary directories.&lt;/description&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;name&gt;fs.default.name&lt;/name&gt;
+        &lt;value&gt;hdfs://master:9000&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>编辑hdfs-site.xml</p>
+<pre><code>&lt;configuration&gt;
+    &lt;property&gt;
+       &lt;name&gt;dfs.name.dir&lt;/name&gt;
+       &lt;value&gt;/hd/hadoop/dfs/name&lt;/value&gt;
+       &lt;description&gt;Path on the local filesystem where theNameNode stores the namespace and transactions logs persistently.&lt;/description&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+       &lt;name&gt;dfs.data.dir&lt;/name&gt;
+       &lt;value&gt;/hd/hadoop/dfs/data&lt;/value&gt;
+       &lt;description&gt;Comma separated list of paths on the localfilesystem of a DataNode where it should store its blocks.&lt;/description&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+       &lt;name&gt;dfs.replication&lt;/name&gt;
+       &lt;value&gt;2&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+          &lt;name&gt;dfs.permissions&lt;/name&gt;
+          &lt;value&gt;false&lt;/value&gt;
+          &lt;description&gt;need not permissions&lt;/description&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>编辑mapred-site.xml</p>
+<pre><code>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapred.job.tracker&lt;/name&gt;
+        &lt;value&gt;master:49001&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+          &lt;name&gt;mapred.local.dir&lt;/name&gt;
+           &lt;value&gt;/hd/hadoop/var&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+           &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+           &lt;value&gt;yarn&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>修改hadoop/etc/hadoop/slaves文件，修改如下</p>
+<pre><code>slave1
+slave2
+</code></pre></li>
+<li><p>编辑yarn-site.xml</p>
+<pre><code>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+        &lt;value&gt;master&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;description&gt;The address of the applications manager interface in the RM.&lt;/description&gt;
+        &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;
+        &lt;value&gt;${yarn.resourcemanager.hostname}:8032&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;description&gt;The address of the scheduler interface.&lt;/description&gt;
+        &lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt;
+        &lt;value&gt;${yarn.resourcemanager.hostname}:8030&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;description&gt;The http address of the RM web application.&lt;/description&gt;
+        &lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;
+        &lt;value&gt;${yarn.resourcemanager.hostname}:8088&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;description&gt;The https adddress of the RM web application.&lt;/description&gt;
+        &lt;name&gt;yarn.resourcemanager.webapp.https.address&lt;/name&gt;
+        &lt;value&gt;${yarn.resourcemanager.hostname}:8090&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt;
+        &lt;value&gt;${yarn.resourcemanager.hostname}:8031&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;description&gt;The address of the RM admin interface.&lt;/description&gt;
+        &lt;name&gt;yarn.resourcemanager.admin.address&lt;/name&gt;
+        &lt;value&gt;${yarn.resourcemanager.hostname}:8033&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;name&gt;yarn.scheduler.maximum-allocation-mb&lt;/name&gt;
+        &lt;value&gt;2048&lt;/value&gt;
+        &lt;discription&gt;每个节点可用内存,单位MB,默认8182MB&lt;/discription&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.vmem-pmem-ratio&lt;/name&gt;
+        &lt;value&gt;2.1&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.resource.memory-mb&lt;/name&gt;
+        &lt;value&gt;2048&lt;/value&gt;
+
+    &lt;/property&gt;
+       &lt;property&gt;
+            &lt;name&gt;yarn.nodemanager.vmem-check-enabled&lt;/name&gt;
+            &lt;value&gt;false&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>作者辛勤码字，我要打赏！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Johnathon Qiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Johnathon Qiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/python/MacOS-install-scrapy/" rel="next" title="MacOS install scrapy">
+                <i class="fa fa-chevron-left"></i> MacOS install scrapy
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -424,6 +782,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -443,8 +807,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -459,7 +832,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -470,7 +843,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -481,7 +854,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -544,6 +917,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hadoop完全分布式安装"><span class="nav-number">1.</span> <span class="nav-text">hadoop完全分布式安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置节点"><span class="nav-number">1.2.</span> <span class="nav-text">配置节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看java版本-确保java已经安装"><span class="nav-number">1.3.</span> <span class="nav-text">查看java版本,确保java已经安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭防火墙，关闭firewall"><span class="nav-number">1.4.</span> <span class="nav-text">关闭防火墙，关闭firewall</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hd作为大数据环境用户，给hd用户增加sudo权限"><span class="nav-number">1.5.</span> <span class="nav-text">hd作为大数据环境用户，给hd用户增加sudo权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置jdk"><span class="nav-number">1.6.</span> <span class="nav-text">配置jdk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Hadoop"><span class="nav-number">1.7.</span> <span class="nav-text">配置Hadoop</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -666,10 +1055,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
