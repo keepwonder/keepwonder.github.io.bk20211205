@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[conda cheet sheet]]></title>
+    <url>%2Fpython%2Fconda-cheet-sheet%2F</url>
+    <content type="text"><![CDATA[Conda basics: 描述 命令 查看conda是否安装，版本信息 conda info 更新conda至最新版本 conda update conda 安装Anaconda内置的包 conda install PACKAGENAME 运行安装过的包，例如Spyder spyder 更新安装过的程序 conda update PACKAGENAME 获取命令行帮助 COMMANDNAME –help(help前面两个-)例如：conda install –help Using enviroments: 描述 命令 创建一个环境，命名为py35，并使用python3.5 conda create –name py35 python=3.5 激活并使用新环境 WINDOWS: activate py35LINUX,MacOS: source py35 获取所有安装环境列表，当前激活环境以*标记 conda env listconda info –envs 完全复制一个环境 conda create –clone py35 –name py35-2 列出当前激活环境的所有包和版本信息 conda list 列出版本改变历史信息 conda list –revisions 将环境恢复至之前的版本 conda install –revision 将环境信息保存至文本文件 conda list –explicit &gt; bio-env.txt 完全删除一个环境 conda env remove –name bio-envconda remove –name bio-env –all 退出当前激活环境 WINDOWS: deactivemacOS, LINUX: source deactive 从文本文件创建一个环境 conda env create –file bio-env.txt 栈命令：创建一个新环境，命名为bio-env，再安装biopython包 conda create –name bio-env biopython Finding conda packages 描述 命令 使用conda查找一个包 conda searche PACKAGENAME 查看Anaconda中的所有包 https://docs.anaconda.com/anaconda/packages/pkg-docs Installing and updating packages 描述 命令 安装一个新包(Jupyter Notebook) conda install jupter 运行安装过的包(Jupyter-notebook) jupyter-notebook 在非但前激活环境(bio-env)中安装一个新包(toolz) conda install –name bio-env toolz 更新当前激活环境中的一个包 conda update scikit-learn 从指定的渠道(conda-forge)安装一个包(boltons) conda install –channel conda-forge boltons 在当前激活环境使用pip直接从PyPI安装一个包 pip install boltons 从指定环境(bio-env)删除一个或多个包(toolz,bltons) conda remove –name bio-env toolz boltons Managing multiple versions of Python 描述 命令 在一个新的名为py34的环境中安装一个不同版本的python conda create –name py34 python=3.4 切换至拥有不同python版本的环境中 WINDOWS: activate py34LINUX,MacOS: source activate 显示当前python所在的路径 WINDOWS: where pythonLINUX,MacOS: which python 显示当前python版本信息 python –version Specify version numbers使用conda create,conda install命令或者在meta.yaml文件中指定包的版本的方法 Constraint type Specification Result Fuzzy numpy=1.11 1.11.0, 1.11.1, 1.11.2, 1.11.18 etc. Exact numpy==1.11 1.11.0 Greater than or equal to “numpy&gt;=1.11” 1.11.0 or hihger OR “numpy=1.11.1&#124;1.11.3” 1.11.1, 1.11.3 AND “numpy&gt;=1.8,&lt;2” 1.8, 1.9, not 2.0 notes:markdown表格内换行:&lt;br&gt;stack commands:感觉只可意会，翻译成堆栈命令有点奇怪markdown表格转义|:使用ASCII字符集&amp;#124;]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>conda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[brief tutorial to conda]]></title>
+    <url>%2Fpython%2Fbrief-tutorial-to-conda%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>conda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[problems in using python]]></title>
+    <url>%2Fpython%2Fproblems-in-using-python%2F</url>
+    <content type="text"><![CDATA[(声明，以下Q代表问题，A代表答案) Q1: 安装mysql-python库报错，如下：(python27) jockie:/usr/local/bin$ pip install mysql-python Collecting mysql-python Using cached MySQL-python-1.2.5.zip Complete output from command python setup.py egg_info: sh: mysql_config: command not found Traceback (most recent call last): File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt; File &quot;/private/var/folders/yf/m8nhcn4x1vd1snmnykt7n89h0000gn/T/pip-build-sSaKtK/mysql-python/setup.py&quot;, line 17, in &lt;module&gt; metadata, options = get_config() File &quot;setup_posix.py&quot;, line 43, in get_config libs = mysql_config(&quot;libs_r&quot;) File &quot;setup_posix.py&quot;, line 25, in mysql_config raise EnvironmentError(&quot;%s not found&quot; % (mysql_config.path,)) EnvironmentError: mysql_config not found ---------------------------------------- Command &quot;python setup.py egg_info&quot; failed with error code 1 in /private/var/folders/yf/m8nhcn4x1vd1snmnykt7n89h0000gn/T/pip-build-sSaKtK/mysql-python/ A1: 找不到mysql_config，原因mysql安装目录/usr/local/mysql/bin不在PATH中临时解决方法：export PATH=$PATH:/usr/local/mysql/bin]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python PEP8]]></title>
+    <url>%2Funcategorized%2Fpython-PEP8%2F</url>
+    <content type="text"><![CDATA[PEP8——python代码风格指南序言]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[centos7+hadoop2.8.0 full cluster]]></title>
     <url>%2FBigData%2Fcentos7-hadoop2-8-0-full-cluster%2F</url>
     <content type="text"><![CDATA[hadoop完全分布式安装环境 主机：3台centos7主机，用户名和密码都设置为root/root，hd/hd hadoop版本：hadoop2.8.0 jdk版本：java1.8.0 配置节点 设置主机ip 主机 IP 对应角色 master 192.168.140.135 namendoe slave1 192.168.140.136 datanode slave2 192.168.140.137 datanode 永久修改hostname 分别设为 hostnamectl set-hostname master hostnamectl set-hostname slave1 hostnamectl set-hostname slave2 设置 /etc/hosts文件 ，添加如下 192.168.140.135 master 192.168.140.136 slave1 192.168.140.137 slave2 查看java版本,确保java已经安装[hd@master bigdata]$ java -version java version &quot;1.8.0_131&quot; Java(TM) SE Runtime Environment (build 1.8.0_131-b11) Java HotSpot(TM) 64-Bit Server VM (build 25.131-b11, mixed mode) [hd@master bigdata]$ 关闭防火墙，关闭firewall 查看防火墙状态 [root@master ~]# firewall-cmd –state running 停止服务 [root@master ~]# systemctl stop firewalld.service [root@master ~]# firewall-cmd –state not running 禁用防火墙 [root@master ~]# systemctl disable firewalld.service Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service. Removed symlink /etc/systemd/system/basic.target.wants/firewalld.service. [root@master ~]# firewall-cmd –state not running hd作为大数据环境用户，给hd用户增加sudo权限[root@master ~]# ll /etc/sudoers -r-xr-----. 1 root root 3907 Nov 4 2016 /etc/sudoers [root@master ~]# chmod u+w /etc/sudoers [root@master ~]# vi /etc/sudoers ## Allow root to run any commands anywhere root ALL=(ALL) ALL hd ALL=(ALL)NOPASSWD:ALL [root@master ~]# chmod u-w /etc/sudoers 切换到hd用户下,配置SSH免密码登录 ssh-keygen -t rsa -P &apos;&apos; cp id_rsa.pub authorized_keys 配置jdk[hd@master bigdata]$ sudo vi /etc/profile export JAVA_HOME=/usr/local/bigdata/jdk1.8 export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib/ export PATH=$PATH:$JAVA_HOME/bin 配置Hadoop 编辑hadoop-env.sh #The java implementation to use. export JAVA_HOME=/usr/local/bigdata/jdk1.8 编辑core-site.xml &lt;configuration&gt; &lt;property&gt; &lt;name&gt;hadoop.tmp.dir&lt;/name&gt; &lt;value&gt;/hd/hadoop/tmp&lt;/value&gt; &lt;description&gt;Abase for other temporary directories.&lt;/description&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;fs.default.name&lt;/name&gt; &lt;value&gt;hdfs://master:9000&lt;/value&gt; &lt;/property&gt; &lt;/configuration&gt; 编辑hdfs-site.xml &lt;configuration&gt; &lt;property&gt; &lt;name&gt;dfs.name.dir&lt;/name&gt; &lt;value&gt;/hd/hadoop/dfs/name&lt;/value&gt; &lt;description&gt;Path on the local filesystem where theNameNode stores the namespace and transactions logs persistently.&lt;/description&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;dfs.data.dir&lt;/name&gt; &lt;value&gt;/hd/hadoop/dfs/data&lt;/value&gt; &lt;description&gt;Comma separated list of paths on the localfilesystem of a DataNode where it should store its blocks.&lt;/description&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;dfs.replication&lt;/name&gt; &lt;value&gt;2&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;dfs.permissions&lt;/name&gt; &lt;value&gt;false&lt;/value&gt; &lt;description&gt;need not permissions&lt;/description&gt; &lt;/property&gt; &lt;/configuration&gt; 编辑mapred-site.xml &lt;configuration&gt; &lt;property&gt; &lt;name&gt;mapred.job.tracker&lt;/name&gt; &lt;value&gt;master:49001&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;mapred.local.dir&lt;/name&gt; &lt;value&gt;/hd/hadoop/var&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;mapreduce.framework.name&lt;/name&gt; &lt;value&gt;yarn&lt;/value&gt; &lt;/property&gt; &lt;/configuration&gt; 修改hadoop/etc/hadoop/slaves文件，修改如下 slave1 slave2 编辑yarn-site.xml &lt;configuration&gt; &lt;property&gt; &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt; &lt;value&gt;master&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;description&gt;The address of the applications manager interface in the RM.&lt;/description&gt; &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt; &lt;value&gt;${yarn.resourcemanager.hostname}:8032&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;description&gt;The address of the scheduler interface.&lt;/description&gt; &lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt; &lt;value&gt;${yarn.resourcemanager.hostname}:8030&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;description&gt;The http address of the RM web application.&lt;/description&gt; &lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt; &lt;value&gt;${yarn.resourcemanager.hostname}:8088&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;description&gt;The https adddress of the RM web application.&lt;/description&gt; &lt;name&gt;yarn.resourcemanager.webapp.https.address&lt;/name&gt; &lt;value&gt;${yarn.resourcemanager.hostname}:8090&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt; &lt;value&gt;${yarn.resourcemanager.hostname}:8031&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;description&gt;The address of the RM admin interface.&lt;/description&gt; &lt;name&gt;yarn.resourcemanager.admin.address&lt;/name&gt; &lt;value&gt;${yarn.resourcemanager.hostname}:8033&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt; &lt;value&gt;mapreduce_shuffle&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;yarn.scheduler.maximum-allocation-mb&lt;/name&gt; &lt;value&gt;2048&lt;/value&gt; &lt;discription&gt;每个节点可用内存,单位MB,默认8182MB&lt;/discription&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;yarn.nodemanager.vmem-pmem-ratio&lt;/name&gt; &lt;value&gt;2.1&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;yarn.nodemanager.resource.memory-mb&lt;/name&gt; &lt;value&gt;2048&lt;/value&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;yarn.nodemanager.vmem-check-enabled&lt;/name&gt; &lt;value&gt;false&lt;/value&gt; &lt;/property&gt; &lt;/configuration&gt;]]></content>
@@ -14,7 +52,7 @@
   <entry>
     <title><![CDATA[MacOS install scrapy]]></title>
     <url>%2Fpython%2FMacOS-install-scrapy%2F</url>
-    <content type="text"><![CDATA[环境系统版本：macOS Sierra 10.12.6python版本：Python3 安装步骤 安装homebrew /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安装wget brew install wget 安装command line tools xcode-select --install 安装pip wget https://bootstrap.pypa.io/get-pip.py python get-pip.py It’s an important step 重新启动Mac OS 重启时按住Command+R，进入Recovery模式 在Recovery模式中输入: csrutil disable; 重新启动，回到Mac OS 安装scrapy sudo -H pip install Scrapy 查看版本信息 scarpy version]]></content>
+    <content type="text"><![CDATA[环境系统版本：macOS Sierra 10.12.6python版本：Python3 安装步骤 安装homebrew /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安装wget brew install wget 安装command line tools xcode-select --install 安装pip wget https://bootstrap.pypa.io/get-pip.py python get-pip.py 重启系统 重新启动Mac OS 重启时按住Command+R，进入Recovery模式 在Recovery模式中输入: csrutil disable; 重新启动，回到Mac OS 安装scrapy sudo -H pip install Scrapy 查看版本信息 scarpy version]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -49,8 +87,8 @@
     <url>%2Funcategorized%2Fpython-whois%2F</url>
     <content type="text"><![CDATA[在爬取一个网站时，又是我们需要查看一个网站的所有者相关信息，这时就可以用到whois这个模块step1: 使用pip install python-whois安装whois模块(/Users/jockie/install_programs/anaconda) jockie:~/programs/pycharm$ pip install python-whois Collecting python-whois Downloading python-whois-0.6.5.tar.gz Collecting future (from python-whois) Downloading future-0.16.0.tar.gz (824kB) 100% |################################| 829kB 137kB/s Building wheels for collected packages: python-whois, future Running setup.py bdist_wheel for python-whois ... done Stored in directory: /Users/jockie/Library/Caches/pip/wheels/37/68/27/819a3f07cbe75200d8cfa74d4517fd0f402b6dd7aaf91afe8b Running setup.py bdist_wheel for future ... done Stored in directory: /Users/jockie/Library/Caches/pip/wheels/c2/50/7c/0d83b4baac4f63ff7a765bd16390d2ab43c93587fac9d6017a Successfully built python-whois future Installing collected packages: future, python-whois Successfully installed future-0.16.0 python-whois-0.6.5 step2: 使用whoisIn [1]: import whois In [2]: whois.whois(&apos;xuanxiewu.com&apos;) Out[2]: {&apos;address&apos;: &apos;NanJingShiYuHuaTaiQuXiShanQiaoMeiXinXiaoQu&apos;, &apos;city&apos;: &apos;Nanjing&apos;, &apos;country&apos;: &apos;CN&apos;, &apos;creation_date&apos;: datetime.datetime(2014, 9, 28, 4, 9, 31), &apos;dnssec&apos;: &apos;unsigned&apos;, &apos;domain_name&apos;: [&apos;XUANXIEWU.COM&apos;, &apos;xuanxiewu.com&apos;], &apos;emails&apos;: [&apos;tld@cndns.com&apos;, &apos;domain@cndns.com&apos;, &apos;1044699649@qq.com&apos;], &apos;expiration_date&apos;: [datetime.datetime(2018, 9, 28, 4, 9, 31), datetime.datetime(2018, 9, 28, 12, 7, 1)], &apos;name&apos;: &apos;qiang jiong&apos;, &apos;name_servers&apos;: [&apos;F1G1NS1.DNSPOD.NET&apos;, &apos;F1G1NS2.DNSPOD.NET&apos;, &apos;f1g1ns1.dnspod.net&apos;, &apos;f1g1ns2.dnspod.net&apos;], &apos;org&apos;: &apos;qiang jiong&apos;, &apos;referral_url&apos;: None, &apos;registrar&apos;: &apos;SHANGHAI MEICHENG TECHNOLOGY INFORMATION DEVELOPMENT CO., LTD.&apos;, &apos;state&apos;: &apos;Jiangsu&apos;, &apos;status&apos;: [&apos;clientTransferProhibited https://icann.org/epp#clientTransferProhibited&apos;, &apos;ok https://icann.org/epp#ok&apos;], &apos;updated_date&apos;: [datetime.datetime(2017, 6, 19, 15, 33, 50), datetime.datetime(2017, 6, 19, 23, 33, 51)], &apos;whois_server&apos;: &apos;grs-whois.cndns.com&apos;, &apos;zipcode&apos;: &apos;210041&apos;}]]></content>
       <tags>
-        <tag>spider</tag>
         <tag>python</tag>
+        <tag>spider</tag>
       </tags>
   </entry>
   <entry>
@@ -61,8 +99,8 @@
         <category>DataAnalysis</category>
       </categories>
       <tags>
-        <tag>spider</tag>
         <tag>python</tag>
+        <tag>spider</tag>
       </tags>
   </entry>
   <entry>
@@ -117,9 +155,9 @@
         <category>BigData</category>
       </categories>
       <tags>
+        <tag>linux</tag>
         <tag>hive</tag>
         <tag>mysql</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -153,9 +191,9 @@
         <category>配置相关</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>mac</tag>
         <tag>ubuntu</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
