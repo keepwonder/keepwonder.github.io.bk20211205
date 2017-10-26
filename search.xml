@@ -12,17 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[brief tutorial to conda]]></title>
-    <url>%2Fpython%2Fbrief-tutorial-to-conda%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>conda</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[problems in using python]]></title>
     <url>%2Fpython%2Fproblems-in-using-python%2F</url>
     <content type="text"><![CDATA[(声明，以下Q代表问题，A代表答案) Q1: 安装mysql-python库报错，如下：(python27) jockie:/usr/local/bin$ pip install mysql-python Collecting mysql-python Using cached MySQL-python-1.2.5.zip Complete output from command python setup.py egg_info: sh: mysql_config: command not found Traceback (most recent call last): File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt; File &quot;/private/var/folders/yf/m8nhcn4x1vd1snmnykt7n89h0000gn/T/pip-build-sSaKtK/mysql-python/setup.py&quot;, line 17, in &lt;module&gt; metadata, options = get_config() File &quot;setup_posix.py&quot;, line 43, in get_config libs = mysql_config(&quot;libs_r&quot;) File &quot;setup_posix.py&quot;, line 25, in mysql_config raise EnvironmentError(&quot;%s not found&quot; % (mysql_config.path,)) EnvironmentError: mysql_config not found ---------------------------------------- Command &quot;python setup.py egg_info&quot; failed with error code 1 in /private/var/folders/yf/m8nhcn4x1vd1snmnykt7n89h0000gn/T/pip-build-sSaKtK/mysql-python/ A1: 找不到mysql_config，原因mysql安装目录/usr/local/mysql/bin不在PATH中临时解决方法：export PATH=$PATH:/usr/local/mysql/bin]]></content>
@@ -155,9 +144,9 @@
         <category>BigData</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>hive</tag>
         <tag>mysql</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -191,9 +180,9 @@
         <category>配置相关</category>
       </categories>
       <tags>
+        <tag>linux</tag>
         <tag>mac</tag>
         <tag>ubuntu</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
