@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/python/problems-in-using-python/index.html">
 <meta property="og:site_name" content="Johnathon&#39;s Blabla">
 <meta property="og:image" content="http://yoursite.com/img/problems.jpg">
-<meta property="og:updated_time" content="2017-10-25T08:07:32.000Z">
+<meta property="og:updated_time" content="2017-10-28T04:50:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="problems in using python">
 <meta name="twitter:image" content="http://yoursite.com/img/problems.jpg">
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  171 (字)
+                  392 (字)
                 </span>
               
 
@@ -445,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1 (分)
+                  2 (分)
                 </span>
               
             </div>
@@ -464,7 +464,9 @@
 
       
         <p><img src="/img/problems.jpg" width="500" height="350"><br><a id="more"></a><br>(声明，以下Q代表问题，A代表答案)</p>
-<h2 id="Q1-安装mysql-python库报错，如下："><a href="#Q1-安装mysql-python库报错，如下：" class="headerlink" title="Q1: 安装mysql-python库报错，如下："></a>Q1: 安装mysql-python库报错，如下：</h2><pre><code>(python27) jockie:/usr/local/bin$ pip install mysql-python
+<h2 id="Q1-安装mysql-python库报错，如下："><a href="#Q1-安装mysql-python库报错，如下：" class="headerlink" title="Q1: 安装mysql-python库报错，如下："></a>Q1: 安装mysql-python库报错，如下：</h2><ul>
+<li><p>描述</p>
+<pre><code>(python27) jockie:/usr/local/bin$ pip install mysql-python
 Collecting mysql-python
   Using cached MySQL-python-1.2.5.zip
     Complete output from command python setup.py egg_info:
@@ -481,8 +483,46 @@ Collecting mysql-python
 
     ----------------------------------------
 Command &quot;python setup.py egg_info&quot; failed with error code 1 in /private/var/folders/yf/m8nhcn4x1vd1snmnykt7n89h0000gn/T/pip-build-sSaKtK/mysql-python/
-</code></pre><h2 id="A1-找不到mysql-config，原因mysql安装目录-usr-local-mysql-bin不在PATH中"><a href="#A1-找不到mysql-config，原因mysql安装目录-usr-local-mysql-bin不在PATH中" class="headerlink" title="A1: 找不到mysql_config，原因mysql安装目录/usr/local/mysql/bin不在PATH中"></a>A1: 找不到mysql_config，原因mysql安装目录/usr/local/mysql/bin不在PATH中</h2><pre><code>临时解决方法：export PATH=$PATH:/usr/local/mysql/bin
-</code></pre>
+</code></pre></li>
+<li><p>A1: 找不到mysql_config，原因mysql安装目录/usr/local/mysql/bin不在PATH中,临时解决方法：</p>
+<pre><code>export PATH=$PATH:/usr/local/mysql/bin
+</code></pre></li>
+</ul>
+<h2 id="Q2-import循环引用，导致ImportError，"><a href="#Q2-import循环引用，导致ImportError，" class="headerlink" title="Q2: import循环引用，导致ImportError，"></a>Q2: import循环引用，导致ImportError，</h2><ul>
+<li><p>描述：如下两个文件互相调用：</p>
+<pre><code>#home/__init__.py
+from flask import Blueprint
+import app.home.views
+home = Blueprint(&apos;home&apos;, __name__)
+
+#home/views.py
+from . import home
+@home.route(&apos;/&apos;)
+def index():
+    return &apos;&lt;h1 style=&quot;color:green&quot;&gt;this is home!&lt;/h1&gt;&apos;
+
+Traceback (most recent call last):
+  File &quot;/Users/jockie/programs/micro_movie/manage.py&quot;, line 7, in &lt;module&gt;
+    from app import app
+  File &quot;/Users/jockie/programs/micro_movie/app/__init__.py&quot;, line 8, in &lt;module&gt;
+    from app.home import home as home_blueprint
+  File &quot;/Users/jockie/programs/micro_movie/app/home/__init__.py&quot;, line 9, in &lt;module&gt;
+    import app.home.views
+  File &quot;/Users/jockie/programs/micro_movie/app/home/views.py&quot;, line 7, in &lt;module&gt;
+    from . import home
+ImportError: cannot import name &apos;home&apos;
+</code></pre></li>
+<li><p>A2: 程序执行的顺序是从上往下执行，所以要先定义home对象，再导入视图！修改<strong>init</strong>.py中import顺序</p>
+<pre><code>#home/__init__.py
+from flask import Blueprint
+home = Blueprint(&apos;home&apos;, __name__)
+import app.home.views
+</code></pre></li>
+</ul>
+<h2 id="Q3-flask程序中，修改css后，浏览器无法实时显示更新？"><a href="#Q3-flask程序中，修改css后，浏览器无法实时显示更新？" class="headerlink" title="Q3: flask程序中，修改css后，浏览器无法实时显示更新？"></a>Q3: flask程序中，修改css后，浏览器无法实时显示更新？</h2><ul>
+<li>A3: 需要清除浏览器缓存(设置debug=True无效)</li>
+</ul>
+
       
     </div>
 
@@ -753,7 +793,7 @@ Command &quot;python setup.py egg_info&quot; failed with error code 1 in /privat
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q1-安装mysql-python库报错，如下："><span class="nav-number">1.</span> <span class="nav-text">Q1: 安装mysql-python库报错，如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A1-找不到mysql-config，原因mysql安装目录-usr-local-mysql-bin不在PATH中"><span class="nav-number">2.</span> <span class="nav-text">A1: 找不到mysql_config，原因mysql安装目录/usr/local/mysql/bin不在PATH中</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q1-安装mysql-python库报错，如下："><span class="nav-number">1.</span> <span class="nav-text">Q1: 安装mysql-python库报错，如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q2-import循环引用，导致ImportError，"><span class="nav-number">2.</span> <span class="nav-text">Q2: import循环引用，导致ImportError，</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q3-flask程序中，修改css后，浏览器无法实时显示更新？"><span class="nav-number">3.</span> <span class="nav-text">Q3: flask程序中，修改css后，浏览器无法实时显示更新？</span></a></li></ol></div>
             
 
           </div>
