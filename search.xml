@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[flask-microblog-2: hello flask]]></title>
+    <url>%2Fpython%2Fflask-microblog-2-hello-flask%2F</url>
+    <content type="text"><![CDATA[flask轻博客之Hello Word!上一篇文章中，已经搭建好了基本环境，这一篇正式进入flask!安装flaskpip install flask 查看是否安装成功，pip freeze显示如下说明安装成功，同时也可以看出flask依赖如下一些包：click,itsdangerous,jinja2,MarkupSafe,Werkzeug,后面会有相关的一些介绍，这里知道就好(micro-blog) jockie:~/programs/learn_flask/flask_microblog (master *)$ pip freeze certifi==2017.7.27.1 click==6.7 Flask==0.12.2 itsdangerous==0.24 Jinja2==2.9.6 MarkupSafe==1.0 Werkzeug==0.12.2 实现flask的hello world应用，这里我们在官方示例的基础上稍微修改一下 创建主入口文件app.py # coding:utf-8 # 导入Flask类和config配置 from flask import Flask from config import config # 实例化一个Flask类 app = Flask(__name__) # 从文件config导入配置，当然在配置项少的情况下也可以直接操作：app.config[&apos;DEBUG&apos;] app.config.from_object(config) # 设置 URL=&apos;/&apos;时的路由规则；以默认GET方法请求访问http://&lt;host:port&gt;/时，调用index(),并将return结果返回给浏览器 @app.route(&apos;/&apos;) def index(): return &apos;&lt;h1&gt;Hello Flask!&lt;/h1&gt;&apos; if __name__ == &apos;__main__&apos;: # 应用的入口函数 app.run() 在app.py中可以看到除了import Flask之外，还import了config文件，config的做用是存放开发所有的一些配置文件，比如在下面创建的config.py中的DEBUG配置，以及后面涉及到的数据库配置等 # coding:utf-8 # 开启DEBUG模式，便于开发测试，生产环境不建议开启 DEBUG = True 运行入口文件app.py文件,程序运行在默认5000端口 (micro-blog) jockie:~/programs/learn_flask/flask_microblog (master *)$ python app.py * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) * Restarting with stat * Debugger is active! * Debugger PIN: 210-650-536 进入浏览器，查看结果如下]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[flask-microblog-1: prepare]]></title>
+    <url>%2Fpython%2Fflask-microblog-1-prepare%2F</url>
+    <content type="text"><![CDATA[flask轻博客之environment代码库托管github上，在GitHub上创建一个repository(默认已经安装git)： 仓库地址：https://github.com/keepwonder/flask-microblog.git 创建本地开发目录flask_microblog并和GitHub关联 cd /Users/jockie/programs/learn_flask/flask_microblog # 进入项目根目录 git init # 初始化git仓库 echo “# Micro Blog with Python Flask” &gt;&gt; README.md # 创建README文件 git add . # 将新建的README添加进git缓冲 git commit -m ‘first commit’ # 提交文件至git仓库 git remote add origin https://github.com/keepwonder/flask-microblog.git # 添加远程git仓库 git push -u origin master # 将文件推送至远程git仓库master分支 至此，本地目录已与GitHub仓库关联，以后每次修改本地代码都可以同步推送至GitHub，通过GitHub达到管理跟踪代码的目的 本地采用虚拟环境隔离这个项目环境，使用conda管理： 新建一个conda环境 conda create –name micro-blog python=2.7 激活micro-blog环境,目录前会显示当前所在环境(micro-blog),以后所有操作，都基于此环境 source activate micro-blog (micro-blog) jockie:~/programs/learn_flask/flask_microblog (master)$ 在当前环境，运行pip命令，查看相关环境信息,python版本为2.7.14，pip freeze只安装了一个包 (micro-blog) jockie:~$ pip list Package Version ---------- ----------------- certifi 2017.7.27.1 pip 9.0.1 setuptools 36.5.0.post20170921 wheel 0.29.0 (micro-blog) jockie:~$ pip freeze certifi==2017.7.27.1 (micro-blog) jockie:~$ python –version Python 2.7.14 :: Anaconda, Inc. 退出当前虚拟环境 source deactivate 至此，基本环境已经搭建完成，下一步就正式开启项目！]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[conda cheet sheet]]></title>
     <url>%2Fpython%2Fconda-cheet-sheet%2F</url>
     <content type="text"><![CDATA[Conda basics: 描述 命令 查看conda是否安装，版本信息 conda info 更新conda至最新版本 conda update conda 安装Anaconda内置的包 conda install PACKAGENAME 运行安装过的包，例如Spyder spyder 更新安装过的程序 conda update PACKAGENAME 获取命令行帮助 COMMANDNAME –help(help前面两个-)例如：conda install –help Using enviroments: 描述 命令 创建一个环境，命名为py35，并使用python3.5 conda create –name py35 python=3.5 激活并使用新环境 WINDOWS: activate py35LINUX,MacOS: source py35 获取所有安装环境列表，当前激活环境以*标记 conda env listconda info –envs 完全复制一个环境 conda create –clone py35 –name py35-2 列出当前激活环境的所有包和版本信息 conda list 列出版本改变历史信息 conda list –revisions 将环境恢复至之前的版本 conda install –revision 将环境信息保存至文本文件 conda list –explicit &gt; bio-env.txt 完全删除一个环境 conda env remove –name bio-envconda remove –name bio-env –all 退出当前激活环境 WINDOWS: deactivemacOS, LINUX: source deactive 从文本文件创建一个环境 conda env create –file bio-env.txt 栈命令：创建一个新环境，命名为bio-env，再安装biopython包 conda create –name bio-env biopython Finding conda packages 描述 命令 使用conda查找一个包 conda searche PACKAGENAME 查看Anaconda中的所有包 https://docs.anaconda.com/anaconda/packages/pkg-docs Installing and updating packages 描述 命令 安装一个新包(Jupyter Notebook) conda install jupter 运行安装过的包(Jupyter-notebook) jupyter-notebook 在非但前激活环境(bio-env)中安装一个新包(toolz) conda install –name bio-env toolz 更新当前激活环境中的一个包 conda update scikit-learn 从指定的渠道(conda-forge)安装一个包(boltons) conda install –channel conda-forge boltons 在当前激活环境使用pip直接从PyPI安装一个包 pip install boltons 从指定环境(bio-env)删除一个或多个包(toolz,bltons) conda remove –name bio-env toolz boltons Managing multiple versions of Python 描述 命令 在一个新的名为py34的环境中安装一个不同版本的python conda create –name py34 python=3.4 切换至拥有不同python版本的环境中 WINDOWS: activate py34LINUX,MacOS: source activate 显示当前python所在的路径 WINDOWS: where pythonLINUX,MacOS: which python 显示当前python版本信息 python –version Specify version numbers使用conda create,conda install命令或者在meta.yaml文件中指定包的版本的方法 Constraint type Specification Result Fuzzy numpy=1.11 1.11.0, 1.11.1, 1.11.2, 1.11.18 etc. Exact numpy==1.11 1.11.0 Greater than or equal to “numpy&gt;=1.11” 1.11.0 or hihger OR “numpy=1.11.1&#124;1.11.3” 1.11.1, 1.11.3 AND “numpy&gt;=1.8,&lt;2” 1.8, 1.9, not 2.0 notes:markdown表格内换行:&lt;br&gt;stack commands:感觉只可意会，翻译成堆栈命令有点奇怪markdown表格转义|:使用ASCII字符集&amp;#124;]]></content>
