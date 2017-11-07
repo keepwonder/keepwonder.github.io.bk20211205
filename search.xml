@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Install mysql5.7 on aliyun ECS ubuntu16.04.4]]></title>
+    <url>%2Fdatabase%2FInstall-mysql5-7-on-aliyun-ECS-ubuntu16-04-4%2F</url>
+    <content type="text"><![CDATA[阿里云ECS(ubuntu16.04.4)安装MySQL并设置远程访问(以下以root用户操作)更新源apt-get update 安装mysql服务器apt-get install mysql-server apt-get install mysql-client apt-get install libmysqlclient-dev 查看是否安装成功(安装之前也可以使用此命令查看是否有安装MySQL)netstat -tap | grep mysql 重启服务/etc/init.d/mysql restart 登录(假设用户名和密码都为root)mysql -uroot -proot 正常情况按照以上操作，应该可以进入mysql了。 远程访问MySQL，阿里云默认只能本地连接，需要以下操作支持远程访问数据库安装后 查看数据库 mysql&gt; show databases; +——————–+ | Database | +——————–+ | information_schema | | mysql | | performance_schema | | sys | +——————–+ 4 rows in set (0.00 sec) 切换到mysql库 mysql&gt; use mysql; Reading table information for completion of table and column names You can turn off this feature to get a quicker startup with -A Database changed 查看host,user mysql&gt; select distinct host,user from user; +———–+——————+ | host | user | +———–+——————+ | localhost | root | | localhost | debian-sys-maint | | localhost | mysql.session | | localhost | mysql.sys | +———–+——————+ 4 rows in set (0.01 sec) 更改host以支持远程访问 mysql&gt; update user set host=’%’ where user=’root’ and host=’localhost’; 刷新权限，使配置生效 mysql&gt; flush privileges; 一般情况下，到这里就可以远程访问了，但是由于MySQL是安装在阿里云上的，阿里云默认没有开启3306端口，所以需要到阿里云控制台安全组规则配置规则，开启3306端口，默认情况下只有后五条，开启后会多出第一条，如下图]]></content>
+      <categories>
+        <category>database</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+        <tag>aliyun</tag>
+        <tag>ubuntu</tag>
+        <tag>ECS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[flask-microblog-2: hello flask]]></title>
     <url>%2Fpython%2Fflask-microblog-2-hello-flask%2F</url>
     <content type="text"><![CDATA[flask轻博客之Hello Word!上一篇文章中，已经搭建好了基本环境，这一篇正式进入flask!安装flaskpip install flask 查看是否安装成功，pip freeze显示如下说明安装成功，同时也可以看出flask依赖如下一些包：click,itsdangerous,jinja2,MarkupSafe,Werkzeug,后面会有相关的一些介绍，这里知道就好(micro-blog) jockie:~/programs/learn_flask/flask_microblog (master *)$ pip freeze certifi==2017.7.27.1 click==6.7 Flask==0.12.2 itsdangerous==0.24 Jinja2==2.9.6 MarkupSafe==1.0 Werkzeug==0.12.2 实现flask的hello world应用，这里我们在官方示例的基础上稍微修改一下 创建主入口文件app.py # coding:utf-8 # 导入Flask类和config配置 from flask import Flask from config import config # 实例化一个Flask类 app = Flask(__name__) # 从文件config导入配置，当然在配置项少的情况下也可以直接操作：app.config[&apos;DEBUG&apos;] app.config.from_object(config) # 设置 URL=&apos;/&apos;时的路由规则；以默认GET方法请求访问http://&lt;host:port&gt;/时，调用index(),并将return结果返回给浏览器 @app.route(&apos;/&apos;) def index(): return &apos;&lt;h1&gt;Hello Flask!&lt;/h1&gt;&apos; if __name__ == &apos;__main__&apos;: # 应用的入口函数 app.run() 在app.py中可以看到除了import Flask之外，还import了config文件，config的做用是存放开发所有的一些配置文件，比如在下面创建的config.py中的DEBUG配置，以及后面涉及到的数据库配置等 # coding:utf-8 # 开启DEBUG模式，便于开发测试，生产环境不建议开启 DEBUG = True 运行入口文件app.py文件,程序运行在默认5000端口 (micro-blog) jockie:~/programs/learn_flask/flask_microblog (master *)$ python app.py * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) * Restarting with stat * Debugger is active! * Debugger PIN: 210-650-536 进入浏览器，查看结果如下]]></content>
@@ -205,8 +219,8 @@
       </categories>
       <tags>
         <tag>linux</tag>
-        <tag>mac</tag>
         <tag>ubuntu</tag>
+        <tag>mac</tag>
       </tags>
   </entry>
   <entry>
