@@ -13,10 +13,10 @@
   </entry>
   <entry>
     <title><![CDATA[python built-in constants]]></title>
-    <url>%2Fpython3%2Fpython-built-in-constants%2F</url>
+    <url>%2Fpython%2Fpython-built-in-constants%2F</url>
     <content type="text"><![CDATA[python内置常量Falsebool类型的假值，python3中，False作为一个关键字不能被赋值，赋值是非法的，会报语法错误： In [1]: False = 0 File &quot;&lt;ipython-input-1-389dfc15b373&gt;&quot;, line 1 False = 0 ^ SyntaxError: can&apos;t assign to keyword True同False一样，bool类型的真值，python3中，True作为一个关键字不能被赋值，赋值是非法的，会报语法错误： In [1]: True = 1 File &quot;&lt;ipython-input-2-11e39cdf8368&gt;&quot;, line 1 True = 1 ^ SyntaxError: can&apos;t assign to keyword NoneNoneType类型的唯一返回值，None通常被用来表示一个值得缺失，同样也不能被赋值 In [1]: None = [] File &quot;&lt;ipython-input-4-263c1fbabdb8&gt;&quot;, line 1 None = [] ^ SyntaxError: can&apos;t assign to keyword NotImplementedEllipsis__debug__如果不是以-o运行python，返回True quit(code=Node)exit(code=None)copyrightIn [1]: copyright Out[1]: Copyright (c) 2001-2016 Python Software Foundation. All Rights Reserved. Copyright (c) 2000 BeOpen.com. All Rights Reserved. Copyright (c) 1995-2001 Corporation for National Research Initiatives. All Rights Reserved. Copyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam. All Rights Reserved. licenseIn [1]: license Out[1]: Type license() to see the full license text In [2]: license() A. HISTORY OF THE SOFTWARE ========================== Python was created in the early 1990s by Guido van Rossum at Stichting Mathematisch Centrum (CWI, see http://www.cwi.nl) in the Netherlands as a successor of a language called ABC. Guido remains Python&apos;s principal author, although it includes many contributions from others. In 1995, Guido continued his work on Python at the Corporation for National Research Initiatives (CNRI, see http://www.cnri.reston.va.us) in Reston, Virginia where he released several versions of the software. In May 2000, Guido and the Python core development team moved to BeOpen.com to form the BeOpen PythonLabs team. In October of the same year, the PythonLabs team moved to Digital Creations (now Zope Corporation, see http://www.zope.com). In 2001, the Python Software Foundation (PSF, see http://www.python.org/psf/) was formed, a non-profit organization created specifically to own Python-related Intellectual Property. Zope Corporation is a sponsoring member of the PSF. All Python releases are Open Source (see http://www.opensource.org for Hit Return for more, or q (and Return) to quit: creditsIn [1]: credits Out[1]: Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands for supporting Python development. See www.python.org for more information.]]></content>
       <categories>
-        <category>python3</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>built-in constants</tag>
@@ -24,10 +24,10 @@
   </entry>
   <entry>
     <title><![CDATA[python built-in functions]]></title>
-    <url>%2Fpython3%2Fpython-built-in-functions%2F</url>
+    <url>%2Fpython%2Fpython-built-in-functions%2F</url>
     <content type="text"><![CDATA[python内置函数python解释器内置许多函数和类型，我们可以直接使用，下表按字典顺序列出 内置函数 abs() dict() help() min() setattr() all() dir() hex() next() slice() any() divmod() id() object() sorted() ascii() enumerate() input() oct() staticmethod() bin() eval() int() open() str() bool() exec() isinstance() ord() sum() bytearray() filter() issubclass() pow() super() bytes() float() iter() print() tuple() callable() format() len() property() type() chr() frozenset() list() range() vars() classmethod() getattr() locals() repr() zip() compile() globals() map() reversed() __import__() complex() hasattr() max() round() delattr() hash() memoryview() set() abs(x)返回一个数的绝对值。参数可以是一个整型或者浮点型。如果参数是一个复数的话，则返回magnitue magnitude的计算规则如下： 实数的magnitude就是该实数的正平方根，如2的magnitude就是2，-3的magnitude就是3 复数的magnitude是该复数与共轭复数的乘积的正平方根，比如z=3-2j，则magnitude为(3-2j)*(3+2j)的正平方根，也就是9+4＝13的正平方根；示例： In [1]: abs(7) Out[1]: 7 In [2]: abs(-7.7) Out[2]: 7.7 In [3]: abs(complex(7,7)) Out[3]: 9.899494936611665 all(iterable)参数为可迭代对象，如果对象的所有元素为真或者对象为空，则返回True，等价于： def all(iterable): for element in iterable: if not element: return False return True 示例： In [6]: all([1,2,3]) Out[6]: True In [7]: all(()) Out[7]: True In [10]: all([1,2,3,None]) Out[10]: False any(iterable)参数为可迭代对象，如果对象的任一元素为真，则返回True，如果对象为空，则返回False，等价于： def any(iterable): for element in iterable: if element: return True return False 示例： In [11]: any([True,False]) Out[11]: True In [12]: any({}) Out[12]: False asciibinboolbytearraybytescallablechrclassmethodcompilecomplexdelattrdictdirdivmodenumerateevalexecfilterfloatformatfrozensetgetattrglobalshasattrhashhelphexid(object)返回一个对象的‘标识’,在一个对象的生命周期中，保持唯一不变。两个不处在同一生命周期的对象调用id()也许会返回一样的值 CPython实现的细节：返回值是对象在内存中的地址 &gt;&gt;&gt; s1 = &apos;sss&apos; &gt;&gt;&gt; s2 = &apos;sss&apos; &gt;&gt;&gt; s3 = &apos;s*s&apos; &gt;&gt;&gt; s4 = &apos;s*s&apos; &gt;&gt;&gt; id(s1) 4351970960 &gt;&gt;&gt; id(s2) 4351970960 &gt;&gt;&gt; id(s3) 4351970640 &gt;&gt;&gt; id(s4) 4351970680 inputintisinstanceissubclassiterlenlistlocalsmaxabsmemoryviewminnextobjectoctordpowprint(*objects, sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)propertyrangereprreversedroundsetsetattrslicesortedstaticmethodstrsumsupertupletypevarszip__import__]]></content>
       <categories>
-        <category>python3</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>built-in functions</tag>
@@ -41,8 +41,8 @@
         <category>database</category>
       </categories>
       <tags>
-        <tag>aliyun</tag>
         <tag>mysql</tag>
+        <tag>aliyun</tag>
         <tag>ubuntu</tag>
         <tag>ECS</tag>
       </tags>
@@ -84,10 +84,10 @@
   </entry>
   <entry>
     <title><![CDATA[problems in using python]]></title>
-    <url>%2Fpython3%2Fproblems-in-using-python%2F</url>
+    <url>%2Fpython%2Fproblems-in-using-python%2F</url>
     <content type="text"><![CDATA[(声明，以下Q代表问题，A代表答案) Q1: 安装mysql-python库报错，如下： 描述 (python27) jockie:/usr/local/bin$ pip install mysql-python Collecting mysql-python Using cached MySQL-python-1.2.5.zip Complete output from command python setup.py egg_info: sh: mysql_config: command not found Traceback (most recent call last): File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt; File &quot;/private/var/folders/yf/m8nhcn4x1vd1snmnykt7n89h0000gn/T/pip-build-sSaKtK/mysql-python/setup.py&quot;, line 17, in &lt;module&gt; metadata, options = get_config() File &quot;setup_posix.py&quot;, line 43, in get_config libs = mysql_config(&quot;libs_r&quot;) File &quot;setup_posix.py&quot;, line 25, in mysql_config raise EnvironmentError(&quot;%s not found&quot; % (mysql_config.path,)) EnvironmentError: mysql_config not found ---------------------------------------- Command &quot;python setup.py egg_info&quot; failed with error code 1 in /private/var/folders/yf/m8nhcn4x1vd1snmnykt7n89h0000gn/T/pip-build-sSaKtK/mysql-python/ A1: 找不到mysql_config，原因mysql安装目录/usr/local/mysql/bin不在PATH中,临时解决方法： export PATH=$PATH:/usr/local/mysql/bin Q2: import循环引用，导致ImportError， 描述：如下两个文件互相调用： #home/__init__.py from flask import Blueprint import app.home.views home = Blueprint(&apos;home&apos;, __name__) #home/views.py from . import home @home.route(&apos;/&apos;) def index(): return &apos;&lt;h1 style=&quot;color:green&quot;&gt;this is home!&lt;/h1&gt;&apos; Traceback (most recent call last): File &quot;/Users/jockie/programs/micro_movie/manage.py&quot;, line 7, in &lt;module&gt; from app import app File &quot;/Users/jockie/programs/micro_movie/app/__init__.py&quot;, line 8, in &lt;module&gt; from app.home import home as home_blueprint File &quot;/Users/jockie/programs/micro_movie/app/home/__init__.py&quot;, line 9, in &lt;module&gt; import app.home.views File &quot;/Users/jockie/programs/micro_movie/app/home/views.py&quot;, line 7, in &lt;module&gt; from . import home ImportError: cannot import name &apos;home&apos; A2: 程序执行的顺序是从上往下执行，所以要先定义home对象，再导入视图！修改init.py中import顺序 #home/__init__.py from flask import Blueprint home = Blueprint(&apos;home&apos;, __name__) import app.home.views Q3: flask程序中，修改css后，浏览器无法实时显示更新？ A3: 需要清除浏览器缓存(设置debug=True无效) Q4: UnicodeEncodeError: ‘ascii’ codec can’t encode character ‘\u3000’ in position 135: ordinal not in range(128)]]></content>
       <categories>
-        <category>python3</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -210,8 +210,8 @@
         <category>BigData</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
         <tag>hive</tag>
+        <tag>mysql</tag>
         <tag>linux</tag>
       </tags>
   </entry>
@@ -246,8 +246,8 @@
         <category>配置相关</category>
       </categories>
       <tags>
-        <tag>ubuntu</tag>
         <tag>linux</tag>
+        <tag>ubuntu</tag>
         <tag>mac</tag>
       </tags>
   </entry>
