@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[sklearn in action with Decistion Tree]]></title>
+    <title><![CDATA[sklearn in action]]></title>
     <url>%2Funcategorized%2Fsklearn-in-action-with-Decistion-Tree%2F</url>
     <content type="text"><![CDATA[决策树]]></content>
       <tags>
@@ -99,8 +99,8 @@
         <category>database</category>
       </categories>
       <tags>
-        <tag>aliyun</tag>
         <tag>mysql</tag>
+        <tag>aliyun</tag>
         <tag>ubuntu</tag>
         <tag>ECS</tag>
       </tags>
@@ -268,8 +268,8 @@
         <category>BigData</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
         <tag>hive</tag>
+        <tag>mysql</tag>
         <tag>linux</tag>
       </tags>
   </entry>
@@ -304,8 +304,8 @@
         <category>配置相关</category>
       </categories>
       <tags>
-        <tag>ubuntu</tag>
         <tag>linux</tag>
+        <tag>ubuntu</tag>
         <tag>mac</tag>
       </tags>
   </entry>
